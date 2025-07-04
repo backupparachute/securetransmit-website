@@ -1,67 +1,33 @@
-<header class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
     <div class="container">
-        <!-- Logo -->
         <a class="navbar-brand" href="{{ '/' | relative_url }}">
-            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="{{ site.title }}" height="40" class="d-inline-block align-text-top">
+            <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Secure Transmit" class="logo-stacked">
+            <img src="{{ '/assets/images/logo-text.png' | relative_url }}" alt="Secure Transmit" class="logo-landscape">
         </a>
         
-        <!-- Mobile Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         
-        <!-- Navigation Menu -->
-        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-            <ul class="navbar-nav">
-                {% for item in site.navigation %}
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link {% if page.url == item.url %}active{% endif %}" href="{{ item.url | relative_url }}">
-                        {{ item.title }}
-                    </a>
+                    <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
                 </li>
-                {% endfor %}
-            </ul>
-        </div>
-        
-        <!-- Search and CTA -->
-        <div class="navbar-nav ms-auto">
-            <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchModal">
-                        <i class="fas fa-search"></i>
-                    </a>
+                    <a class="nav-link" href="{{ '/solutions/' | relative_url }}">Solutions</a>
                 </li>
-                <li class="nav-item ms-2">
-                    <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">
-                        Get Started
-                    </a>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ '/blog.html' | relative_url }}">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ '/contact/' | relative_url }}">Contact</a>
                 </li>
             </ul>
         </div>
     </div>
-</header>
+</nav>
 
-<!-- Search Modal -->
-<div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="searchModalLabel">Search</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="{{ '/search/' | relative_url }}" method="get">
-                    <div class="input-group">
-                        <input type="text" class="form-control" name="q" placeholder="Search..." aria-label="Search">
-                        <button class="btn btn-primary" type="submit">
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Spacer for fixed header -->
+<!-- Spacer for fixed navbar -->
 <div style="height: 80px;"></div> 
