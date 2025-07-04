@@ -1,0 +1,177 @@
+---
+layout: default
+---
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <!-- Blog Post Header -->
+            <div class="blog-header mb-4">
+                <div class="category-badge mb-2">
+                    {% for category in page.categories %}
+                        <span class="badge bg-primary me-2">{{ category }}</span>
+                    {% endfor %}
+                </div>
+                <h1 class="blog-title">{{ page.title }}</h1>
+                <div class="blog-meta text-muted mb-3">
+                    <span class="me-3">
+                        <i class="fas fa-user me-1"></i>
+                        {{ page.author }}
+                    </span>
+                    <span class="me-3">
+                        <i class="fas fa-calendar me-1"></i>
+                        {{ page.date | date: "%B %d, %Y" }}
+                    </span>
+                    <span>
+                        <i class="fas fa-clock me-1"></i>
+                        {% assign words = content | number_of_words %}
+                        {% assign reading_time = words | divided_by: 200 %}
+                        {% if reading_time < 1 %}
+                            1 min read
+                        {% else %}
+                            {{ reading_time }} min read
+                        {% endif %}
+                    </span>
+                </div>
+                {% if page.image %}
+                    <img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid blog-image mb-4">
+                {% endif %}
+            </div>
+
+            <!-- Blog Post Content -->
+            <div class="blog-content">
+                {{ content }}
+            </div>
+
+            <!-- Blog Post Footer -->
+            <div class="blog-footer mt-5 pt-4 border-top">
+                <div class="tags mb-3">
+                    {% for tag in page.tags %}
+                        <span class="badge bg-secondary me-1">{{ tag }}</span>
+                    {% endfor %}
+                </div>
+                
+                <div class="share-buttons">
+                    <h6 class="mb-2">Share this post:</h6>
+                    <a href="https://twitter.com/intent/tweet?text={{ page.title | url_encode }}&url={{ site.url }}{{ page.url }}" class="btn btn-outline-primary btn-sm me-2" target="_blank">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}" class="btn btn-outline-primary btn-sm me-2" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}" class="btn btn-outline-primary btn-sm" target="_blank">
+                        <i class="fab fa-facebook"></i> Facebook
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.blog-header {
+    text-align: center;
+}
+
+.blog-title {
+    color: var(--dark-blue);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+.blog-image {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.blog-content {
+    font-family: 'Catamaran', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--dark-blue);
+}
+
+.blog-content h2 {
+    color: var(--dark-blue);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.blog-content h3 {
+    color: var(--dark-blue);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-content p {
+    margin-bottom: 1.2rem;
+}
+
+.blog-content ul, .blog-content ol {
+    margin-bottom: 1.2rem;
+    padding-left: 1.5rem;
+}
+
+.blog-content li {
+    margin-bottom: 0.5rem;
+}
+
+.blog-content strong {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.blog-content a {
+    color: var(--teal);
+    text-decoration: none;
+}
+
+.blog-content a:hover {
+    color: var(--red);
+    text-decoration: underline;
+}
+
+.category-badge .badge {
+    background-color: var(--red) !important;
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+}
+
+.blog-meta {
+    font-size: 0.9rem;
+}
+
+.blog-footer .badge {
+    background-color: var(--light-gray) !important;
+    color: var(--dark-blue);
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+}
+
+.share-buttons .btn {
+    border-color: var(--red);
+    color: var(--red);
+}
+
+.share-buttons .btn:hover {
+    background-color: var(--red);
+    border-color: var(--red);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .blog-title {
+        font-size: 2rem;
+    }
+    
+    .blog-content {
+        font-size: 1rem;
+    }
+}
+</style> 
