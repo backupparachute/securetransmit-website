@@ -1,0 +1,96 @@
+# Jekyll Configuration for Secure Transmit Website
+# Converted from WordPress static export to Jekyll for GitHub Pages
+
+# Site settings
+title: "Secure Transmit"
+description: "Seamlessly transfer sensitive data with enterprise-grade security, ensuring your files remain private and protected."
+url: "https://securetransmit.io"
+baseurl: ""
+
+# Author information
+author:
+  name: "Kyle"
+  email: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+  pages:
+    output: true
+    permalink: /:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Kyle"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include files
+include:
+  - _pages
+  - _posts
+  - assets
+  - images
+
+# Sass settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page/:num/"
+
+# SEO
+google_analytics: GT-T5PHH7
+
+# Social media
+social:
+  twitter: ""
+  facebook: ""
+  linkedin: ""
+
+# Navigation
+navigation:
+  - title: "Solutions"
+    url: "/solutions/"
+  - title: "Blog"
+    url: "/blog/"
+  - title: "Schedule a Consultation"
+    url: "/contact/"
+
+# Footer
+footer:
+  company: "Secure Transmit"
+  year: "2025" 

@@ -1,0 +1,85 @@
+<footer class="bg-dark text-light py-5 mt-5">
+    <div class="container">
+        <div class="row">
+            <!-- Company Info -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <h5 class="mb-3">{{ site.title }}</h5>
+                <p class="text-muted">{{ site.description }}</p>
+                <div class="social-links">
+                    {% if site.social.twitter %}
+                    <a href="{{ site.social.twitter }}" class="text-muted me-3" aria-label="Twitter">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.social.facebook %}
+                    <a href="{{ site.social.facebook }}" class="text-muted me-3" aria-label="Facebook">
+                        <i class="fab fa-facebook fa-lg"></i>
+                    </a>
+                    {% endif %}
+                    {% if site.social.linkedin %}
+                    <a href="{{ site.social.linkedin }}" class="text-muted me-3" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <!-- Solutions -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6 class="mb-3">Solutions</h6>
+                <ul class="list-unstyled">
+                    <li><a href="{{ '/solutions/' | relative_url }}" class="text-muted text-decoration-none">Overview</a></li>
+                    <li><a href="{{ '/solutions/enterprise/' | relative_url }}" class="text-muted text-decoration-none">Enterprise</a></li>
+                    <li><a href="{{ '/solutions/small-business/' | relative_url }}" class="text-muted text-decoration-none">Small Business</a></li>
+                    <li><a href="{{ '/solutions/individual/' | relative_url }}" class="text-muted text-decoration-none">Individual</a></li>
+                </ul>
+            </div>
+            
+            <!-- Resources -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6 class="mb-3">Resources</h6>
+                <ul class="list-unstyled">
+                    <li><a href="{{ '/blog/' | relative_url }}" class="text-muted text-decoration-none">Blog</a></li>
+                    <li><a href="{{ '/documentation/' | relative_url }}" class="text-muted text-decoration-none">Documentation</a></li>
+                    <li><a href="{{ '/api/' | relative_url }}" class="text-muted text-decoration-none">API</a></li>
+                    <li><a href="{{ '/support/' | relative_url }}" class="text-muted text-decoration-none">Support</a></li>
+                </ul>
+            </div>
+            
+            <!-- Company -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6 class="mb-3">Company</h6>
+                <ul class="list-unstyled">
+                    <li><a href="{{ '/about/' | relative_url }}" class="text-muted text-decoration-none">About</a></li>
+                    <li><a href="{{ '/careers/' | relative_url }}" class="text-muted text-decoration-none">Careers</a></li>
+                    <li><a href="{{ '/press/' | relative_url }}" class="text-muted text-decoration-none">Press</a></li>
+                    <li><a href="{{ '/contact/' | relative_url }}" class="text-muted text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            
+            <!-- Legal -->
+            <div class="col-lg-2 col-md-6 mb-4">
+                <h6 class="mb-3">Legal</h6>
+                <ul class="list-unstyled">
+                    <li><a href="{{ '/privacy/' | relative_url }}" class="text-muted text-decoration-none">Privacy</a></li>
+                    <li><a href="{{ '/terms/' | relative_url }}" class="text-muted text-decoration-none">Terms</a></li>
+                    <li><a href="{{ '/security/' | relative_url }}" class="text-muted text-decoration-none">Security</a></li>
+                    <li><a href="{{ '/compliance/' | relative_url }}" class="text-muted text-decoration-none">Compliance</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Bottom Footer -->
+        <hr class="my-4">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="mb-0 text-muted">&copy; {{ site.footer.year }} {{ site.footer.company }}. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="mb-0 text-muted">
+                    Made with <i class="fas fa-heart text-danger"></i> for secure file transfer
+                </p>
+            </div>
+        </div>
+    </div>
+</footer> 
