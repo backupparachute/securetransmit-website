@@ -564,13 +564,32 @@ footer a:hover {
     }
     
     .hero-image {
-        margin-top: 2rem;
-        max-height: 200px;
+        margin-top: 3.5rem;
+        max-height: 120px;
     }
     
     /* Mobile navbar improvements */
     .navbar-brand img {
         height: 35px;
+    }
+    
+    .navbar {
+        padding-top: 1.2rem !important;
+        padding-bottom: 1.2rem !important;
+    }
+    
+    .navbar-brand {
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .navbar-brand img {
+        margin-top: 0.2rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .navbar-spacer {
+        height: 100px !important;
     }
 }
 
