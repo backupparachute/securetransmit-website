@@ -183,8 +183,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #2a3145 100%);
-    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 50%, #2a3145 100%);
+    padding: 80px 0 60px;
     position: relative;
     overflow: hidden;
 }
@@ -217,6 +217,8 @@ h1, h2, h3, h4, h5, h6 {
 .hero-image {
     max-width: 100%;
     height: auto;
+    max-height: 300px;
+    width: auto;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -224,7 +226,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Page Headers */
 .page-header {
     background: linear-gradient(135deg, var(--secondary-color) 0%, #2a3145 100%);
-    padding: 100px 0 60px;
+    padding: 80px 0 60px;
     position: relative;
 }
 
@@ -387,7 +389,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sections */
 section {
-    padding: 80px 0;
+    padding: 40px 0;
 }
 
 .bg-light {
