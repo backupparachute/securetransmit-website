@@ -220,7 +220,6 @@ h1, h2, h3, h4, h5, h6 {
     max-height: 300px;
     width: auto;
     border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* Page Headers */
@@ -389,7 +388,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Sections */
 section {
-    padding: 40px 0;
+    padding: 20px 0;
 }
 
 .bg-light {
