@@ -17,7 +17,7 @@ description: "Secure Transmit provides enterprise-grade secure file transfer sol
                 </div>
             </div>
             <div class="col-lg-6 text-center">
-                <img src="/assets/images/hero-illustration.svg" alt="Secure File Transfer" class="hero-image">
+                <img src="/assets/images/secure-file-transfer.webp" alt="Secure File Transfer" class="hero-image">
             </div>
         </div>
     </div>
@@ -35,62 +35,74 @@ description: "Secure Transmit provides enterprise-grade secure file transfer sol
         
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="card-title">Advanced Encryption</h3>
+                        <p class="card-text">AES-256 encryption with secure protocols including SFTP, FTPS, and HTTPS to protect your data in transit and at rest.</p>
                     </div>
-                    <h3>Advanced Encryption</h3>
-                    <p>AES-256 encryption with secure protocols including SFTP, FTPS, and HTTPS to protect your data in transit and at rest.</p>
                 </div>
             </div>
             
             <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-check-circle"></i>
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3 class="card-title">Compliance Ready</h3>
+                        <p class="card-text">Automated compliance with GDPR, HIPAA, PCI DSS, and other regulatory standards with built-in audit trails and reporting.</p>
                     </div>
-                    <h3>Compliance Ready</h3>
-                    <p>Automated compliance with GDPR, HIPAA, PCI DSS, and other regulatory standards with built-in audit trails and reporting.</p>
                 </div>
             </div>
             
             <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-plug"></i>
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="card-title">Seamless Integration</h3>
+                        <p class="card-text">Integrate with your existing tools and platforms including Salesforce, AWS, Google Drive, and enterprise security solutions.</p>
                     </div>
-                    <h3>Seamless Integration</h3>
-                    <p>Integrate with your existing tools and platforms including Salesforce, AWS, Google Drive, and enterprise security solutions.</p>
                 </div>
             </div>
             
             <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="card-title">Real-Time Monitoring</h3>
+                        <p class="card-text">Monitor file transfers in real-time with instant alerts, detailed analytics, and comprehensive reporting capabilities.</p>
                     </div>
-                    <h3>Real-Time Monitoring</h3>
-                    <p>Monitor file transfers in real-time with instant alerts, detailed analytics, and comprehensive reporting capabilities.</p>
                 </div>
             </div>
             
             <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-expand-arrows-alt"></i>
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-expand-arrows-alt"></i>
+                        </div>
+                        <h3 class="card-title">Enterprise Scalability</h3>
+                        <p class="card-text">Scale from small teams to multinational corporations with our flexible architecture designed for enterprise growth.</p>
                     </div>
-                    <h3>Enterprise Scalability</h3>
-                    <p>Scale from small teams to multinational corporations with our flexible architecture designed for enterprise growth.</p>
                 </div>
             </div>
             
             <div class="col-lg-4 col-md-6">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="card-title">24/7 Support</h3>
+                        <p class="card-text">Dedicated enterprise support with SLA guarantees, technical expertise, and personalized onboarding assistance.</p>
                     </div>
-                    <h3>24/7 Support</h3>
-                    <p>Dedicated enterprise support with SLA guarantees, technical expertise, and personalized onboarding assistance.</p>
                 </div>
             </div>
         </div>
@@ -111,20 +123,20 @@ description: "Secure Transmit provides enterprise-grade secure file transfer sol
             {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
             {% for post in sorted_posts limit:3 %}
             <div class="col-lg-4 col-md-6">
-                <div class="blog-card">
+                <div class="card blog-card h-100">
                     {% if post.image %}
-                    <img src="{{ post.image }}" alt="{{ post.title }}" class="blog-card-image">
+                    <img src="{{ post.image }}" alt="{{ post.title }}" class="card-img-top blog-card-image">
                     {% endif %}
-                    <div class="blog-card-content">
-                        <div class="blog-card-category">
+                    <div class="card-body">
+                        <div class="blog-card-category mb-2">
                             {% for category in post.categories %}
                                 <span class="badge bg-primary me-1">{{ category }}</span>
                             {% endfor %}
                         </div>
-                        <h3 class="blog-card-title">
+                        <h3 class="card-title blog-card-title">
                             <a href="{{ post.url }}">{{ post.title }}</a>
                         </h3>
-                        <div class="blog-card-meta">
+                        <div class="blog-card-meta text-muted mb-2">
                             <span class="me-3">
                                 <i class="fas fa-calendar me-1"></i>
                                 {{ post.date | date: "%B %d, %Y" }}
@@ -140,7 +152,7 @@ description: "Secure Transmit provides enterprise-grade secure file transfer sol
                                 {% endif %}
                             </span>
                         </div>
-                        <p class="blog-card-excerpt">{{ post.description }}</p>
+                        <p class="card-text">{{ post.description }}</p>
                         <a href="{{ post.url }}" class="btn btn-outline-primary">Read More</a>
                     </div>
                 </div>
@@ -170,223 +182,4 @@ description: "Secure Transmit provides enterprise-grade secure file transfer sol
             </div>
         </div>
     </div>
-</section>
-
-<style>
-/* Hero Section */
-.hero-section {
-    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--red) 100%);
-    color: white;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-}
-
-.hero-subtitle {
-    font-family: 'Catamaran', sans-serif;
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-.hero-image {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Features Section */
-.feature-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-    height: 100%;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-}
-
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--red) 0%, var(--yellow) 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-}
-
-.feature-icon i {
-    font-size: 2rem;
-    color: white;
-}
-
-.feature-card h3 {
-    color: var(--dark-blue);
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.feature-card p {
-    color: var(--dark-blue);
-    font-family: 'Catamaran', sans-serif;
-    line-height: 1.6;
-}
-
-/* Blog Section */
-.blog-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease;
-    height: 100%;
-}
-
-.blog-card:hover {
-    transform: translateY(-5px);
-}
-
-.blog-card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.blog-card-content {
-    padding: 1.5rem;
-}
-
-.blog-card-category .badge {
-    background-color: var(--red) !important;
-    font-size: 0.7rem;
-    padding: 0.4rem 0.8rem;
-}
-
-.blog-card-title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 1.3rem;
-    margin: 0.5rem 0;
-}
-
-.blog-card-title a {
-    color: var(--dark-blue);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.blog-card-title a:hover {
-    color: var(--red);
-}
-
-.blog-card-meta {
-    font-size: 0.8rem;
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.blog-card-excerpt {
-    color: var(--dark-blue);
-    font-family: 'Catamaran', sans-serif;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-/* CTA Section */
-.cta-section {
-    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--red) 100%);
-    color: white;
-}
-
-.cta-title {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 600;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.cta-subtitle {
-    font-family: 'Catamaran', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    opacity: 0.9;
-}
-
-/* Buttons */
-.btn-primary {
-    background-color: var(--red);
-    border-color: var(--red);
-    font-family: 'Catamaran', sans-serif;
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    transition: all 0.2s ease;
-}
-
-.btn-primary:hover {
-    background-color: var(--dark-blue);
-    border-color: var(--dark-blue);
-    transform: translateY(-2px);
-}
-
-.btn-outline-light {
-    border-color: white;
-    color: white;
-    font-family: 'Catamaran', sans-serif;
-    font-weight: 600;
-    padding: 0.75rem 2rem;
-    transition: all 0.2s ease;
-}
-
-.btn-outline-light:hover {
-    background-color: white;
-    color: var(--dark-blue);
-    transform: translateY(-2px);
-}
-
-.btn-outline-primary {
-    border-color: var(--red);
-    color: var(--red);
-    font-family: 'Catamaran', sans-serif;
-    font-weight: 600;
-    transition: all 0.2s ease;
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--red);
-    border-color: var(--red);
-    color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-    
-    .cta-title {
-        font-size: 2rem;
-    }
-    
-    .feature-card {
-        padding: 1.5rem;
-    }
-}
-</style> 
+</section> 
