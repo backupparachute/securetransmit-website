@@ -545,6 +545,33 @@ footer a:hover {
     .feature-card {
         margin-bottom: 2rem;
     }
+    
+    /* Mobile hero section improvements */
+    .hero-section {
+        padding: 60px 0 40px;
+    }
+    
+    .hero-buttons {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 1rem;
+        margin-right: 0 !important;
+    }
+    
+    .hero-image {
+        margin-top: 2rem;
+        max-height: 200px;
+    }
+    
+    /* Mobile navbar improvements */
+    .navbar-brand img {
+        height: 35px;
+    }
 }
 
 /* Animations */
