@@ -1,0 +1,37 @@
+---
+description: Use only commas for pauses — no em-dashes, hyphens, or semicolons
+globs:
+  - "**/*.md"
+  - "**/*.txt"
+  - "**/*.ts"
+  - "**/*.tsx"
+  - "**/*.html"
+alwaysApply: true
+---
+
+**Rule: enforce_commas_for_pauses**
+
+Avoid using em-dashes (—), double hyphens (--), hyphens used as breaks (-), or semicolons (;) to create pauses in sentences. These marks tend to interrupt natural flow and make writing feel robotic or over-engineered.
+
+✅ Use **commas** for natural pauses. If a comma feels awkward, **rewrite the sentence** for clarity and ease of reading.
+
+---
+
+**🚫 Bad Examples:**  
+We added the feature — just in time — before the launch.  
+She’s focused – but distracted – by the noise.  
+They agreed; the deal would move forward.  
+It’s simple--just follow the instructions.
+
+**✅ Good Alternatives:**  
+We added the feature, just in time, before the launch.  
+She’s focused, but distracted by the noise.  
+They agreed the deal would move forward.  
+It’s simple, just follow the instructions.
+
+---
+
+**Rule of thumb:**  
+Write like you're speaking directly to someone. If you're using punctuation to pause for drama or emphasis, rewrite it to sound human and conversational.
+
+**Write for people, not prompts.**
