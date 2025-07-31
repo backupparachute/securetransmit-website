@@ -43,16 +43,9 @@
     <!-- Jekyll SEO Tag -->
     {% seo %}
     
-    <!-- Google Analytics -->
-    {% if site.google_analytics %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', '{{ site.google_analytics }}');
-    </script>
+    <!-- Fathom Analytics -->
+    {% if site.fathom_analytics %}
+    <script src="https://cdn.usefathom.com/script.js" data-site="{{ site.fathom_analytics }}" defer></script>
     {% endif %}
 </head>
 
