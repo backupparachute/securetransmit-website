@@ -5,6 +5,7 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <h5 class="mb-3">{{ site.title }}</h5>
                 <p class="text-muted">{{ site.description }}</p>
+                <a href="{{ '/signup/' | relative_url }}" class="btn btn-primary mb-3" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Footer');}">Sign Up Free</a>
                 <div class="social-links">
                     {% if site.social.twitter %}
                     <a href="{{ site.social.twitter }}" class="text-muted me-3" aria-label="Twitter">
