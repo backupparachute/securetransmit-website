@@ -207,40 +207,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Cookie consent
-    const cookieConsent = localStorage.getItem('cookieConsent');
-    if (!cookieConsent) {
-        const cookieBanner = document.createElement('div');
-        cookieBanner.className = 'alert alert-info alert-dismissible fade show position-fixed';
-        cookieBanner.style.cssText = 'bottom: 0; left: 0; right: 0; margin: 0; border-radius: 0; z-index: 9999;';
-        cookieBanner.innerHTML = `
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <strong>Cookie Notice:</strong> We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.
-                    </div>
-                    <div class="col-md-4 text-md-end">
-                        <button type="button" class="btn btn-primary btn-sm me-2" onclick="acceptCookies()">Accept</button>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="declineCookies()">Decline</button>
-                    </div>
-                </div>
-            </div>
-        `;
-        
-        document.body.appendChild(cookieBanner);
-    }
-    
-    // Cookie functions
-    window.acceptCookies = function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        document.querySelector('.alert-info').remove();
-    };
-    
-    window.declineCookies = function() {
-        localStorage.setItem('cookieConsent', 'declined');
-        document.querySelector('.alert-info').remove();
-    };
-    
     // Theme switcher (if implemented)
     const themeToggle = document.querySelector('#themeToggle');
     if (themeToggle) {

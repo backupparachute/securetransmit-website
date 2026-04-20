@@ -87,8 +87,8 @@ navigation:
     url: "/solutions/"
   - title: "Blog"
     url: "/blog/"
-  - title: "Schedule a Consultation"
-    url: "/contact/"
+  - title: "Sign Up"
+    url: "/signup/"
 
 # Footer
 footer:

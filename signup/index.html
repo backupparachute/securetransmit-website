@@ -1,0 +1,85 @@
+---
+layout: default
+title: "Sign Up - Secure Transmit Beta"
+description: "Secure Transmit is currently in beta. Join the newsletter to be notified when we launch and to be considered for beta access."
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <span class="badge bg-primary mb-3" style="font-size: 0.9rem; padding: 0.5rem 1rem;">Currently in Beta</span>
+                <h1 class="hero-title">Join the Secure Transmit Beta</h1>
+                <p class="hero-subtitle">We're currently in beta and rolling out access in the order signups are received. Join our newsletter to be notified when we release, and to be considered for early beta access.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Signup Form Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-body p-4 p-md-5">
+                        <h2 class="mb-3 text-center">Get Notified</h2>
+                        <p class="text-muted text-center mb-4">Drop your email below and we'll reach out with beta access and launch updates. We'll contact people about beta access in the order signups are received.</p>
+
+                        <form id="signupForm" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="signupName" class="form-label">Name</label>
+                                <input type="text" class="form-control form-control-lg" id="signupName" name="name">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="signupEmail" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control form-control-lg" id="signupEmail" name="email" required>
+                                <div class="invalid-feedback">
+                                    Please provide a valid email address.
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="signupCompany" class="form-label">Company</label>
+                                <input type="text" class="form-control form-control-lg" id="signupCompany" name="company">
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup Form Submit');}">Join the Beta List</button>
+                            </div>
+                        </form>
+
+                        <div id="signupSuccess" class="alert alert-success mt-4 d-none" role="alert">
+                            Thanks! You're on the list. We'll reach out with beta access and release updates.
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-center text-muted mt-4 small">
+                    Questions? <a href="/contact/">Get in touch</a>.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+(function() {
+    var form = document.getElementById('signupForm');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+            form.classList.add('was-validated');
+            return;
+        }
+        if (typeof fathom !== 'undefined') {
+            fathom.trackEvent('Signup Form Submitted');
+        }
+        form.classList.add('d-none');
+        document.getElementById('signupSuccess').classList.remove('d-none');
+    });
+})();
+</script>
