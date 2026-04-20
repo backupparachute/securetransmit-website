@@ -203,9 +203,16 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 0;
 }
 
-.hero-section .container {
+.hero-section .container,
+.hero-section .hero-buttons,
+.hero-section .row {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+}
+
+.hero-section .btn {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-title {
