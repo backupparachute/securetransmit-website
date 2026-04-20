@@ -25,9 +25,6 @@ description: "Latest insights, guides, and articles about secure file transfer, 
             {% for post in sorted_posts %}
             <div class="col-lg-4 col-md-6">
                 <div class="card blog-card h-100">
-                    {% if post.image %}
-                    <img src="{{ post.image }}" alt="{{ post.title }}" class="card-img-top blog-card-image">
-                    {% endif %}
                     <div class="card-body">
                         <div class="blog-card-category mb-2">
                             {% for category in post.categories %}

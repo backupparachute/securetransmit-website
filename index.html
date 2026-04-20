@@ -109,65 +109,6 @@ description: "Secure Transmit provides enterprise-grade secure file transfer sol
     </div>
 </section>
 
-<!-- Latest Blog Posts Section -->
-<section class="blog-section py-4 bg-light">
-    <div class="container">
-        <div class="row text-center mb-4">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">Latest Insights</h2>
-                <p class="section-subtitle">Stay updated with the latest trends in secure file transfer and data security.</p>
-            </div>
-        </div>
-        
-        <div class="row g-4">
-            {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
-            {% for post in sorted_posts limit:3 %}
-            <div class="col-lg-4 col-md-6">
-                <div class="card blog-card h-100">
-                    {% if post.image %}
-                    <img src="{{ post.image }}" alt="{{ post.title }}" class="card-img-top blog-card-image">
-                    {% endif %}
-                    <div class="card-body">
-                        <div class="blog-card-category mb-2">
-                            {% for category in post.categories %}
-                                <span class="badge bg-primary me-1">{{ category }}</span>
-                            {% endfor %}
-                        </div>
-                        <h3 class="card-title blog-card-title">
-                            <a href="{{ post.url }}">{{ post.title }}</a>
-                        </h3>
-                        <div class="blog-card-meta text-muted mb-2">
-                            <span class="me-3">
-                                <i class="fas fa-calendar me-1"></i>
-                                {{ post.date | date: "%B %d, %Y" }}
-                            </span>
-                            <span>
-                                <i class="fas fa-clock me-1"></i>
-                                {% assign words = post.content | number_of_words %}
-                                {% assign reading_time = words | divided_by: 200 %}
-                                {% if reading_time < 1 %}
-                                    1 min read
-                                {% else %}
-                                    {{ reading_time }} min read
-                                {% endif %}
-                            </span>
-                        </div>
-                        <p class="card-text">{{ post.description }}</p>
-                        <a href="{{ post.url }}" class="btn btn-outline-primary">Read More</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-        
-        <div class="row mt-4">
-            <div class="col-12 text-center">
-                <a href="/blog/" class="btn btn-primary">View All Posts</a>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- CTA Section -->
 <section class="cta-section py-4">
     <div class="container">
