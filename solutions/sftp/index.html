@@ -63,82 +63,151 @@ description: "Evented, secure SFTP, no infrastructure required. Filesystem-less 
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Features Intro -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row text-center mb-5">
+        <div class="row text-center">
             <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">SFTP That Works Like Modern Infrastructure</h2>
-                <p class="section-subtitle">Enterprise-grade SFTP without the server management headaches.</p>
+                <span class="section-eyebrow">// How it works</span>
+                <h2 class="section-title">SFTP that works like modern infrastructure.</h2>
+                <p class="section-subtitle mx-auto">Enterprise-grade SFTP without the server management headaches.</p>
             </div>
         </div>
-        
-        <div class="row g-4">
+    </div>
+</section>
+
+<!-- Feature 1 (Variant A: gradient wash) — Protocol-Native -->
+<section class="feature-row feature-row-wash">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <span class="feature-eyebrow">// 01 &middot; Protocol</span>
+                <h2>Protocol-native, enterprise ready.</h2>
+                <p class="feature-lead">Accept files via SFTP without hosting storage. Files land, trigger a workflow, and disappear &mdash; all traceable and secure.</p>
+                <ul class="feature-list">
+                    <li>Standard SFTP protocol support</li>
+                    <li>Enterprise-grade security</li>
+                    <li>Optional Paranoid mode (delete-on-ack)</li>
+                </ul>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="feature-wash-mark">
+                    <i class="fas fa-lock"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 2 (Variant B: terminal snippet) — Fully Evented -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="display-6 me-3">🔐</span>
-                            <h3 class="card-title mb-0">Protocol-Native, Enterprise Ready</h3>
+                <span class="feature-eyebrow">// 02 &middot; Events</span>
+                <h2>Fully evented. No polling, no cron.</h2>
+                <p class="feature-lead">Every PUT or GET action can start a document transformation, API call, or multi-step workflow. Real-time processing without delays.</p>
+                <ul class="feature-list">
+                    <li>Instant event triggering</li>
+                    <li>Workflow integration</li>
+                    <li>Real-time processing</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-terminal">
+                    <div class="feature-terminal-bar">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="name">sftp &mdash; partner session</span>
+                    </div>
+<pre><span class="tk-prompt">$</span> <span class="tk-cmd">sftp partner@sftp.securetransmit.io</span>
+<span class="tk-dim">Connected. Authenticated via key.</span>
+
+sftp&gt; <span class="tk-cmd">put orders-2026-04-23.csv</span>
+<span class="tk-dim">Uploading 14 KB &hellip;</span>
+<span class="tk-arrow">&rarr;</span> workflow:<span class="tk-warn">process-orders</span> triggered
+<span class="tk-arrow">&rarr;</span> transform csv <span class="tk-arrow">&rarr;</span> json
+<span class="tk-arrow">&rarr;</span> POST api.acme.com/orders
+<span class="tk-ok">&check;</span> delivered &middot; 204 OK &middot; 128ms</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 3 (Variant C: flow diagram) — Built for Integration -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// 03 &middot; Integration</span>
+                <h2>Built to bridge legacy and modern.</h2>
+                <p class="feature-lead">Use our SFTP zones to bridge legacy vendors, secure partners, or batch clients. Seamless integration with existing workflows.</p>
+                <ul class="feature-list">
+                    <li>Legacy system compatibility</li>
+                    <li>Partner integration ready</li>
+                    <li>Batch processing support</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-flow">
+                    <div class="feature-flow-node">
+                        <span class="flow-label">Legacy vendor</span>
+                        <span class="flow-tag">SFTP push</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-node is-emphasis">
+                        <span class="flow-label">SecureTransmit SFTP zone</span>
+                        <span class="flow-tag">ephemeral</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-node">
+                        <span class="flow-label">Workflow engine</span>
+                        <span class="flow-tag">transforms</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-branch">
+                        <div class="feature-flow-node">
+                            <span class="flow-label">Your API</span>
+                            <span class="flow-tag">REST</span>
                         </div>
-                        <p class="card-text">Accept files via SFTP without hosting storage. Files land, trigger a workflow, and disappear, all traceable and secure.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Standard SFTP protocol support</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Enterprise-grade security</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Zero-knowledge architecture</li>
-                        </ul>
+                        <div class="feature-flow-node">
+                            <span class="flow-label">Your ERP</span>
+                            <span class="flow-tag">batch</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 4 (Variant D: hash / record display) — Audit Logs + File Hashing -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="display-6 me-3">🛠️</span>
-                            <h3 class="card-title mb-0">Fully Evented</h3>
-                        </div>
-                        <p class="card-text">Every PUT or GET action can start a document transformation, API call, or multi-step workflow. Real-time processing without delays.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Instant event triggering</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Workflow integration</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Real-time processing</li>
-                        </ul>
-                    </div>
-                </div>
+                <span class="feature-eyebrow">// 04 &middot; Audit</span>
+                <h2>Audit logs + file hashing, always on.</h2>
+                <p class="feature-lead">We record every transfer and hash the contents &mdash; perfect for compliance and verification. Complete visibility into all SFTP activity.</p>
+                <ul class="feature-list">
+                    <li>Complete transfer audit trail</li>
+                    <li>File integrity verification</li>
+                    <li>Compliance-ready reporting</li>
+                </ul>
             </div>
-            
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="display-6 me-3">🧰</span>
-                            <h3 class="card-title mb-0">Built for Integration</h3>
-                        </div>
-                        <p class="card-text">Use our SFTP zones to bridge legacy vendors, secure partners, or batch clients. Seamless integration with existing workflows.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Legacy system compatibility</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Partner integration ready</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Batch processing support</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <span class="display-6 me-3">📜</span>
-                            <h3 class="card-title mb-0">Audit Logs + File Hashing</h3>
-                        </div>
-                        <p class="card-text">We record every transfer and hash the contents, perfect for compliance and verification. Complete visibility into all SFTP activity.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Complete transfer audit trail</li>
-                            <li><i class="fas fa-check text-success me-2"></i>File integrity verification</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Compliance-ready reporting</li>
-                        </ul>
-                    </div>
+                <div class="feature-hash">
+                    <div class="feature-hash-label">SHA-256</div>
+                    <div class="feature-hash-value">9f86d081&#8239;884c7d65&#8239;9a2feaa0&#8239;c55ad015<br>a3bf4f1b&#8239;2b0b822c&#8239;d15d6c15&#8239;b0f00a08</div>
+                    <dl class="feature-hash-meta">
+                        <dt>File</dt><dd>orders-2026-04-23.csv &middot; 14 KB</dd>
+                        <dt>Partner</dt><dd>acme-supply</dd>
+                        <dt>Workflow</dt><dd>process-orders</dd>
+                        <dt>Recorded</dt><dd>2026-04-23 14:22:07 UTC</dd>
+                        <dt>Status</dt><dd><span class="ok">&check; delivered</span> &middot; 204 OK</dd>
+                    </dl>
                 </div>
             </div>
         </div>

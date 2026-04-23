@@ -15,8 +15,14 @@ description: "Learn about Secure Transmit's security practices and how we protec
   <div class="container">
     <h2>Encryption</h2>
     <p>All data is encrypted in transit and at rest using industry-standard AES-256 encryption. We use secure protocols (SFTP, FTPS, HTTPS) for all file transfers.</p>
-    <h2>Zero-Knowledge Architecture</h2>
-    <p>We employ a zero-knowledge security model, meaning only you have access to your data. Our staff cannot view your files or sensitive information.</p>
+    <h2>Security modes</h2>
+    <p>SecureTransmit offers tiered security modes so you choose the tradeoff that fits the workflow:</p>
+    <ul>
+      <li><strong>Standard mode</strong> &mdash; AES-256 at rest, TLS in transit, least-privilege access, full audit trail. The default for workflows that need transforms.</li>
+      <li><strong>Sealed mode</strong> &mdash; pre-encrypted payloads that SecureTransmit moves and logs but never decrypts.</li>
+      <li><strong>Paranoid mode</strong> &mdash; delete-on-ack. The moment the destination acknowledges receipt, the file is gone. SHA-256 hash and audit record stay forever for non-repudiation. A breach exposes only in-flight data.</li>
+      <li><strong>Island mode</strong> &mdash; outbound-only architecture. Partners push to SecureTransmit, your systems pull from SecureTransmit, and you close every inbound B2B port on your own firewall.</li>
+    </ul>
     <h2>Compliance</h2>
     <p>Secure Transmit is designed to help you meet regulatory requirements such as GDPR, HIPAA, and SOC 2. We provide audit trails and reporting for compliance needs.</p>
     <h2>User Safety</h2>

@@ -1,0 +1,439 @@
+---
+layout: default
+title: "Pricing"
+description: "SecureTransmit pricing. Solo $5/mo, Pro $49/mo, Business $249/mo, Enterprise from $5k/mo. Self-serve. No free tier. No contact sales."
+---
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="text-white mb-3">Pricing</h1>
+                <p class="text-white-50 lead mb-0">Self-serve. Starts at $5/mo. No free tier. No contact sales.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Plan Cards -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4 align-items-stretch pricing-cards">
+            <!-- Solo -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 pricing-card">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title mb-1">Solo</h3>
+                        <p class="pricing-tagline">A paid floor, not a free tier.</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-price">$5</span>
+                            <span class="pricing-period">/ month</span>
+                        </div>
+                        <p class="pricing-annual">or $50 / year</p>
+                        <ul class="pricing-features">
+                            <li>3 active workflows</li>
+                            <li>100 MB / month transfer</li>
+                            <li>10k API requests / month</li>
+                            <li>7-day file retention</li>
+                            <li>1-year audit + hash retention</li>
+                            <li>10 canonical URLs</li>
+                            <li>1 webhook endpoint in / out</li>
+                            <li>Basic IP block firewall</li>
+                            <li>Community support</li>
+                        </ul>
+                        <div class="mt-auto">
+                            {% if site.beta %}
+                            <a href="{{ site.beta_signup_url | relative_url }}" class="btn btn-outline-primary w-100">Request Beta Access</a>
+                            {% else %}
+                            <a href="{{ site.public_signup_url | relative_url }}?plan=solo" class="btn btn-outline-primary w-100">Get started</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pro -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 pricing-card pricing-card-featured">
+                    <div class="pricing-ribbon">Most popular</div>
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title mb-1">Pro</h3>
+                        <p class="pricing-tagline">Where most real work happens.</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-price">$49</span>
+                            <span class="pricing-period">/ month</span>
+                        </div>
+                        <p class="pricing-annual">&nbsp;</p>
+                        <ul class="pricing-features">
+                            <li>25 active workflows</li>
+                            <li>10 GB / month transfer</li>
+                            <li>100k API requests / month</li>
+                            <li>30-day file retention</li>
+                            <li>Forever audit + hash retention</li>
+                            <li>Paranoid mode (on-ack)</li>
+                            <li>Island mode (outbound-only)</li>
+                            <li>Full firewall (IP + credentials)</li>
+                            <li>1,000 canonical URLs</li>
+                            <li>50 webhook endpoints in / out</li>
+                            <li>AI enrichment (BYO token)</li>
+                            <li>5 team seats, 1 custom domain</li>
+                            <li>Email support</li>
+                        </ul>
+                        <div class="mt-auto">
+                            {% if site.beta %}
+                            <a href="{{ site.beta_signup_url | relative_url }}" class="btn btn-primary w-100">Request Beta Access</a>
+                            {% else %}
+                            <a href="{{ site.public_signup_url | relative_url }}?plan=pro" class="btn btn-primary w-100">Get started</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 pricing-card">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title mb-1">Business</h3>
+                        <p class="pricing-tagline">Team and compliance features.</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-price">$249</span>
+                            <span class="pricing-period">/ month</span>
+                        </div>
+                        <p class="pricing-annual">&nbsp;</p>
+                        <ul class="pricing-features">
+                            <li>Unlimited active workflows</li>
+                            <li>100 GB / month transfer</li>
+                            <li>1M API requests / month</li>
+                            <li>Configurable retention: 30d / 90d / 1y / on-ack</li>
+                            <li>Paranoid mode (full config)</li>
+                            <li>Island mode</li>
+                            <li>Full firewall incl. geo blocking</li>
+                            <li>10,000 canonical URLs</li>
+                            <li>Unlimited webhook endpoints</li>
+                            <li>AI enrichment (BYO token)</li>
+                            <li>SSO / SAML</li>
+                            <li>20 team seats, 5 custom domains</li>
+                            <li>Priority support (24h SLA)</li>
+                        </ul>
+                        <div class="mt-auto">
+                            {% if site.beta %}
+                            <a href="{{ site.beta_signup_url | relative_url }}" class="btn btn-outline-primary w-100">Request Beta Access</a>
+                            {% else %}
+                            <a href="{{ site.public_signup_url | relative_url }}?plan=business" class="btn btn-outline-primary w-100">Get started</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise -->
+            <div class="col-lg-3 col-md-6">
+                <div class="card h-100 pricing-card">
+                    <div class="card-body d-flex flex-column">
+                        <h3 class="card-title mb-1">Enterprise</h3>
+                        <p class="pricing-tagline">Custom retention, HIPAA BAA, SCIM.</p>
+                        <div class="pricing-amount">
+                            <span class="pricing-price">$5k+</span>
+                            <span class="pricing-period">/ month</span>
+                        </div>
+                        <p class="pricing-annual">Annual, quoted</p>
+                        <ul class="pricing-features">
+                            <li>Unlimited workflows, custom volume</li>
+                            <li>Fully custom retention (incl. delete-on-ack default)</li>
+                            <li>Paranoid &amp; Island modes, fully configurable</li>
+                            <li>Unlimited canonical URLs</li>
+                            <li>Unlimited webhook endpoints</li>
+                            <li>AI enrichment (BYO token)</li>
+                            <li>SSO / SAML, SCIM, RBAC</li>
+                            <li>Audit log export</li>
+                            <li>HIPAA BAA available</li>
+                            <li>Dedicated support</li>
+                            <li>Custom team seats + domains</li>
+                        </ul>
+                        <div class="mt-auto">
+                            <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline-primary w-100">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tier Philosophy -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <h3 class="h4 mb-2">Solo is a paid floor, not a free tier.</h3>
+                        <p class="text-muted mb-0">We don't do free. A $5/mo floor keeps our servers honest, weeds out abuse, and means every Solo account is someone with real intent. If that's a dealbreaker, we're probably not your tool.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h4 mb-2">Pro is where most real work happens.</h3>
+                        <p class="text-muted mb-0">Swipe a card, production workflows, AI enrichment, Paranoid mode, Island mode &mdash; all there.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h4 mb-2">Business adds team and compliance features.</h3>
+                        <p class="text-muted mb-0">SSO, geo-blocking, higher throughput, priority support. Plus full retention configurability.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="h4 mb-2">Enterprise starts at $5k/mo.</h3>
+                        <p class="text-muted mb-0">Custom retention, HIPAA BAA, dedicated support, SCIM, audit log export. Founding rates available for design partners &mdash; contact us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Matrix -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-4">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="section-title">Full feature matrix</h2>
+                <p class="section-subtitle">Everything every tier gets, spelled out.</p>
+            </div>
+        </div>
+
+        <div class="accordion" id="pricingMatrix">
+            <!-- Volume -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#matrixVolume" aria-expanded="true" aria-controls="matrixVolume">
+                        Volume &amp; limits
+                    </button>
+                </h3>
+                <div id="matrixVolume" class="accordion-collapse collapse show" data-bs-parent="#pricingMatrix">
+                    <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                            <table class="table pricing-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">Solo</th>
+                                        <th scope="col">Pro</th>
+                                        <th scope="col">Business</th>
+                                        <th scope="col">Enterprise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Active workflows</th><td>3</td><td>25</td><td>Unlimited</td><td>Unlimited</td></tr>
+                                    <tr><th scope="row">Monthly transfer included</th><td>100 MB</td><td>10 GB</td><td>100 GB</td><td>Custom</td></tr>
+                                    <tr><th scope="row">Monthly API requests</th><td>10k</td><td>100k</td><td>1M</td><td>Custom</td></tr>
+                                    <tr><th scope="row">Overage pricing</th><td>Hard cap</td><td>$0.50/GB, $5/100k req</td><td>Volume discount</td><td>Volume discount</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Retention -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#matrixRetention" aria-expanded="false" aria-controls="matrixRetention">
+                        Retention
+                    </button>
+                </h3>
+                <div id="matrixRetention" class="accordion-collapse collapse" data-bs-parent="#pricingMatrix">
+                    <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                            <table class="table pricing-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">Solo</th>
+                                        <th scope="col">Pro</th>
+                                        <th scope="col">Business</th>
+                                        <th scope="col">Enterprise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">File retention (default)</th><td>7 days</td><td>30 days</td><td>90 days</td><td>Custom</td></tr>
+                                    <tr><th scope="row">Configurable retention windows</th><td>&mdash;</td><td>Paranoid on-ack only</td><td>30d / 90d / 1y / on-ack</td><td>Fully custom (incl. delete-on-ack default)</td></tr>
+                                    <tr><th scope="row">Audit + hash retention</th><td>1 year</td><td>Forever</td><td>Forever</td><td>Forever</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security architecture -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#matrixSecurity" aria-expanded="false" aria-controls="matrixSecurity">
+                        Security architecture
+                    </button>
+                </h3>
+                <div id="matrixSecurity" class="accordion-collapse collapse" data-bs-parent="#pricingMatrix">
+                    <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                            <table class="table pricing-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">Solo</th>
+                                        <th scope="col">Pro</th>
+                                        <th scope="col">Business</th>
+                                        <th scope="col">Enterprise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Paranoid mode (ephemeral)</th><td>&mdash;</td><td>On-ack only</td><td>Full config</td><td>Full config</td></tr>
+                                    <tr><th scope="row">Island mode (outbound-only)</th><td>&mdash;</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                                    <tr><th scope="row">Built-in firewall (IP / creds)</th><td>Basic IP block</td><td>Full</td><td>Full</td><td>Full</td></tr>
+                                    <tr><th scope="row">Firewall (geo blocking)</th><td>&mdash;</td><td>&mdash;</td><td>Yes</td><td>Yes</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Capabilities -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#matrixCapabilities" aria-expanded="false" aria-controls="matrixCapabilities">
+                        Capabilities
+                    </button>
+                </h3>
+                <div id="matrixCapabilities" class="accordion-collapse collapse" data-bs-parent="#pricingMatrix">
+                    <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                            <table class="table pricing-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">Solo</th>
+                                        <th scope="col">Pro</th>
+                                        <th scope="col">Business</th>
+                                        <th scope="col">Enterprise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Canonical URLs</th><td>10</td><td>1,000</td><td>10,000</td><td>Unlimited</td></tr>
+                                    <tr><th scope="row">Industrial webhook receive</th><td>1 endpoint</td><td>50 endpoints</td><td>Unlimited</td><td>Unlimited</td></tr>
+                                    <tr><th scope="row">Industrial webhook send</th><td>1 destination</td><td>50 destinations</td><td>Unlimited</td><td>Unlimited</td></tr>
+                                    <tr><th scope="row">AI enrichment (BYO token)</th><td>&mdash;</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team & admin -->
+            <div class="accordion-item">
+                <h3 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#matrixTeam" aria-expanded="false" aria-controls="matrixTeam">
+                        Team, admin &amp; compliance
+                    </button>
+                </h3>
+                <div id="matrixTeam" class="accordion-collapse collapse" data-bs-parent="#pricingMatrix">
+                    <div class="accordion-body p-0">
+                        <div class="table-responsive">
+                            <table class="table pricing-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Feature</th>
+                                        <th scope="col">Solo</th>
+                                        <th scope="col">Pro</th>
+                                        <th scope="col">Business</th>
+                                        <th scope="col">Enterprise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr><th scope="row">Team seats</th><td>1</td><td>5</td><td>20</td><td>Custom</td></tr>
+                                    <tr><th scope="row">Custom domains</th><td>0</td><td>1</td><td>5</td><td>Unlimited</td></tr>
+                                    <tr><th scope="row">SSO / SAML</th><td>&mdash;</td><td>&mdash;</td><td>Yes</td><td>Yes</td></tr>
+                                    <tr><th scope="row">SCIM, RBAC, audit log export</th><td>&mdash;</td><td>&mdash;</td><td>Add-on</td><td>Yes</td></tr>
+                                    <tr><th scope="row">HIPAA BAA</th><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Yes</td></tr>
+                                    <tr><th scope="row">Support</th><td>Community</td><td>Email</td><td>Priority (24h SLA)</td><td>Dedicated</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 mx-auto">
+                <h2 class="section-title text-center mb-4">Pricing FAQ</h2>
+                <div class="accordion" id="pricingFaq">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqRetention">How does file retention work?</button>
+                        </h3>
+                        <div id="faqRetention" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                            <div class="accordion-body">Every plan sets a default file retention window &mdash; 7 days on Solo, 30 on Pro, 90 on Business, fully custom on Enterprise. When that window expires, the file data is deleted. Audit records and SHA-256 hashes are retained separately (1 year on Solo, forever on Pro and up) so you can still prove what moved, even after the file is gone.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqOnAck">What does "delete on ack" mean?</button>
+                        </h3>
+                        <div id="faqOnAck" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                            <div class="accordion-body">The moment the destination system acknowledges receipt, the file is deleted. No retention window, no waiting. The SHA-256 hash and the audit record stay forever. Breach exposes only in-flight data. Available on Pro and up; the default on Enterprise if you want it.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqIsland">How does Island mode interact with pricing?</button>
+                        </h3>
+                        <div id="faqIsland" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                            <div class="accordion-body">Island mode is architectural, not metered. It's included on Pro and up at no extra charge. Partners push to SecureTransmit, your systems pull from SecureTransmit, and you close every inbound B2B port on your own firewall.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqAi">Do AI tokens cost extra?</button>
+                        </h3>
+                        <div id="faqAi" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                            <div class="accordion-body">No. AI enrichment steps call your provider with your API key. Your provider, your account, your data policy, your bill for tokens. SecureTransmit doesn't resell AI or take a cut.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqFounding">What's a "founding rate" for Enterprise?</button>
+                        </h3>
+                        <div id="faqFounding" class="accordion-collapse collapse" data-bs-parent="#pricingFaq">
+                            <div class="accordion-body">Our public Enterprise floor is $5k/mo. For a limited number of design partners willing to work closely with us, we negotiate a founding rate. That's a private conversation &mdash; <a href="{{ '/contact/' | relative_url }}">contact us</a> and tell us what you're building.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Closing CTA -->
+<section class="cta-section py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="cta-title">Stop duct-taping integrations together.</h2>
+                <p class="cta-subtitle">Self-serve. Starts at $5/mo. No contact sales.</p>
+                <div class="cta-buttons">
+                    {% if site.beta %}
+                    <a href="{{ site.beta_signup_url | relative_url }}" class="btn btn-primary btn-lg me-3" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Beta Access CTA Click - Pricing Footer');}">Request Beta Access</a>
+                    {% else %}
+                    <a href="{{ site.public_signup_url | relative_url }}" class="btn btn-primary btn-lg me-3" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Pricing Footer');}">Sign Up</a>
+                    {% endif %}
+                    <a href="{{ '/documentation/' | relative_url }}" class="btn btn-outline-light btn-lg">Read the docs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

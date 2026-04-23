@@ -1,0 +1,7 @@
+{% if site.beta %}
+<div class="beta-banner" role="region" aria-label="Beta notice">
+    <strong>Closed beta.</strong>
+    Access is by approval and billing is paused for approved accounts. Public launch is coming.
+    <a href="{{ site.beta_signup_url | relative_url }}" class="beta-banner-cta">Request access &rarr;</a>
+</div>
+{% endif %}

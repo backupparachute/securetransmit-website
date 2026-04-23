@@ -1,0 +1,110 @@
+---
+layout: default
+title: "Request Beta Access"
+description: "SecureTransmit is in closed beta. Tell us what you're building and we'll get back to you. Approved accounts are free during beta."
+---
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="text-white mb-3">Request beta access</h1>
+                <p class="text-white-50 lead mb-0">SecureTransmit is in closed beta. Tell us what you're building and we'll get back to you.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Intro + Form -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="mb-5">
+                    <p class="lead">We're approving accounts individually. Approved accounts are <strong>free during beta</strong> &mdash; billing turns on when we flip to public launch.</p>
+                </div>
+
+                <!--
+                    Submission handler not wired yet. Kyle: point the form action
+                    at Formspree / Outseta / Netlify Forms / SMTP webhook when ready.
+                    Fields below are final.
+                -->
+                <form class="beta-form" action="#" method="post" onsubmit="event.preventDefault(); document.getElementById('betaFormStub').scrollIntoView({behavior:'smooth'});">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="betaName" class="form-label">Your name</label>
+                            <input type="text" class="form-control" id="betaName" name="name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="betaEmail" class="form-label">Work email</label>
+                            <input type="email" class="form-control" id="betaEmail" name="email" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="betaCompany" class="form-label">Company</label>
+                            <input type="text" class="form-control" id="betaCompany" name="company" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="betaRole" class="form-label">Your role</label>
+                            <input type="text" class="form-control" id="betaRole" name="role" placeholder="e.g. Integration Engineer, CTO">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="betaUseCase" class="form-label">Primary use case</label>
+                            <select class="form-control" id="betaUseCase" name="use_case" required>
+                                <option value="">Select one&hellip;</option>
+                                <option value="b2b-files">B2B files (SFTP, file exchange)</option>
+                                <option value="edi">EDI (X12, EDIFACT, custom)</option>
+                                <option value="webhooks">Webhooks (receive / send)</option>
+                                <option value="canonical-urls">Canonical URLs / stable references</option>
+                                <option value="webforms">Webforms / structured uploads</option>
+                                <option value="workflows">Workflow engine / transforms</option>
+                                <option value="other">Something else</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="betaVolume" class="form-label">Estimated monthly volume <span class="text-muted">(optional)</span></label>
+                            <input type="text" class="form-control" id="betaVolume" name="volume" placeholder="e.g. 500 files/mo, 10 GB, 50k API calls">
+                        </div>
+                        <div class="col-12">
+                            <label for="betaDescription" class="form-label">What are you building?</label>
+                            <textarea class="form-control" id="betaDescription" name="description" rows="5" placeholder="One or two sentences on the integration or problem you want to solve." required></textarea>
+                        </div>
+                        <div class="col-12 d-flex flex-column flex-sm-row align-items-start align-items-sm-center gap-3">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit request</button>
+                            <small class="text-muted">We'll respond by email. No sales cycle, no demo required.</small>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="betaFormStub" class="alert alert-warning mt-4 d-none d-print-block">
+                    <strong>Form backend pending.</strong> Submissions aren't wired yet &mdash; Kyle will connect the form to a real inbox before public launch.
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- What to expect -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="section-title text-center mb-4">What happens next</h2>
+                <ol class="beta-timeline">
+                    <li>
+                        <strong>We read every request.</strong>
+                        <p class="text-muted mb-0">Not a bot, not a form filter. Kyle or someone on the team actually reads what you wrote.</p>
+                    </li>
+                    <li>
+                        <strong>We reply within a few business days.</strong>
+                        <p class="text-muted mb-0">Approval, a follow-up question, or a redirect if we're not the right fit yet.</p>
+                    </li>
+                    <li>
+                        <strong>Approved accounts are free until launch.</strong>
+                        <p class="text-muted mb-0">Every feature on the site is yours during beta. Billing turns on when we flip to public launch, and you'll get notice before that happens.</p>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</section>

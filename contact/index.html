@@ -139,7 +139,7 @@ description: Get in touch with our team to learn more about our secure file tran
                         </h2>
                         <div id="collapse1" class="accordion-collapse collapse show" aria-labelledby="faq1" data-bs-parent="#faqAccordion">
                             <div class="accordion-body">
-                                Our platform uses military-grade AES-256 encryption and follows zero-knowledge architecture principles. This means your data is encrypted before it leaves your device, and we cannot access your files even if we wanted to.
+                                Our platform uses AES-256 encryption at rest and TLS in transit. For workflows that don't need transforms, we offer a Sealed mode where SecureTransmit moves your pre-encrypted payload but never decrypts it. For workflows that do need transforms, Paranoid mode deletes the file data the moment the destination acknowledges receipt &mdash; the SHA-256 hash and audit record stay forever for non-repudiation.
                             </div>
                         </div>
                     </div>

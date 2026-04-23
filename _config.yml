@@ -72,6 +72,13 @@ sass:
 paginate: 10
 paginate_path: "/blog/page/:num/"
 
+# Beta state
+# Flip to false at public launch. Beta banner disappears and beta CTAs
+# switch to signup CTAs site-wide. No other copy changes.
+beta: true
+beta_signup_url: "/beta-access/"
+public_signup_url: "/signup/"
+
 # Analytics
 fathom_analytics: ZXLPPAUA
 

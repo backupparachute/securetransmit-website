@@ -1,126 +1,213 @@
 ---
 layout: default
-title: "Secure Transmit - Enterprise Secure File Transfer Solutions"
-description: "Secure Transmit provides enterprise-grade secure file transfer solutions with advanced encryption, compliance automation, and seamless integration capabilities."
+title: "Your B2B edge gateway"
+description: "SecureTransmit is the developer-first B2B integration gateway. Protocol-native ingress, in-flight transforms, reliable egress, and an architecture that can forget what it moved."
 ---
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section class="hero-section">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <h1 class="hero-title">Enterprise Secure File Transfer Solutions</h1>
-                <p class="hero-subtitle">Protect your most valuable asset with industry-leading encryption, compliance automation, and seamless integration capabilities.</p>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <span class="hero-eyebrow">Your B2B edge gateway</span>
+                <h1 class="hero-title hero-title-wide">The integration gateway your duct tape has been waiting for.</h1>
+                <p class="hero-subtitle">SecureTransmit is the developer-first B2B integration gateway &mdash; protocol-native ingress, in-flight transforms, reliable egress, and an architecture that can forget what it moved.</p>
                 <div class="hero-buttons">
-                    <a href="/solutions/" class="btn btn-primary btn-lg me-3">Explore Solutions</a>
-                    <a href="/signup/" class="btn btn-outline-light btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Home Hero');}">Sign Up Free</a>
+                    {% if site.beta %}
+                    <a href="{{ site.beta_signup_url | relative_url }}" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Beta Access CTA Click - Home Hero');}">Request beta access</a>
+                    {% else %}
+                    <a href="{{ site.public_signup_url | relative_url }}" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Home Hero');}">Sign up</a>
+                    {% endif %}
+                    <a href="{{ '/documentation/' | relative_url }}" class="btn btn-outline-light btn-lg">Read the docs</a>
                 </div>
+                <p class="hero-fineprint">Self-serve. Starts at $5/mo. No free tier. No contact sales.</p>
             </div>
-            <div class="col-lg-6 text-center">
-                <img src="/assets/images/Secure Transmit Logo_White.png" alt="Secure Transmit" class="hero-image">
+            <div class="col-lg-5 d-none d-lg-block">
+                <div class="hero-panel">
+                    <div class="hero-panel-header">
+                        <span class="hero-panel-dot"></span>
+                        <span class="hero-panel-dot"></span>
+                        <span class="hero-panel-dot"></span>
+                        <span class="hero-panel-title">securetransmit &mdash; gateway</span>
+                    </div>
+<pre><span class="tok-comment"># ingress</span>
+partner  <span class="tok-arrow">&rarr;</span>  <span class="tok-keyword">sftp</span>    <span class="tok-string">"orders.csv"</span>
+partner  <span class="tok-arrow">&rarr;</span>  <span class="tok-keyword">webhook</span> <span class="tok-string">"order.created"</span>
+partner  <span class="tok-arrow">&rarr;</span>  <span class="tok-keyword">api</span>     <span class="tok-string">"/v1/ingest"</span>
+
+<span class="tok-comment"># workflow</span>
+<span class="tok-keyword">transform</span> csv &rarr; json
+<span class="tok-keyword">enrich</span>    ai.classify
+<span class="tok-keyword">route</span>     by region
+
+<span class="tok-comment"># egress</span>
+erp      <span class="tok-arrow">&larr;</span>  <span class="tok-keyword">api</span>     POST /orders
+partner  <span class="tok-arrow">&larr;</span>  <span class="tok-keyword">webhook</span> signed delivery
+ops      <span class="tok-arrow">&larr;</span>  <span class="tok-keyword">email</span>   daily summary</pre>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Features Section -->
-<section class="features-section py-4">
+<!-- Problems we solve -->
+<section class="py-5">
     <div class="container">
-        <div class="row text-center mb-4">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">Why Choose Secure Transmit?</h2>
-                <p class="section-subtitle">Built for enterprises that demand the highest levels of security and compliance.</p>
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <span class="section-eyebrow">// Problems we solve</span>
+                <h2 class="section-title">All your B2B data exchange. One gateway.</h2>
+                <p class="section-subtitle">Pick the shape of pain you've got. One engine behind every solution: same audit trail, same security modes, same API.</p>
             </div>
         </div>
-        
+
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <a href="{{ '/solutions/edi/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - EDI');}">
+                    <div class="icon-chip"><i class="fas fa-file-invoice"></i></div>
+                    <h3 class="card-title">Onboard a new trading partner in a day, not a quarter.</h3>
+                    <p class="card-text">ANSI X12, EDIFACT, and custom schemas. Live validation and mapping. JSON/XML transformation and routing included.</p>
+                    <span class="card-link-row">Explore EDI <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <div class="col-lg-6">
+                <a href="{{ '/solutions/sftp/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - SFTP');}">
+                    <div class="icon-chip icon-chip-teal"><i class="fas fa-server"></i></div>
+                    <h3 class="card-title">Stop babysitting SFTP servers.</h3>
+                    <p class="card-text">Filesystem-less, evented SFTP with real-time PUT/GET triggers. Zero infrastructure, full audit + hash trail.</p>
+                    <span class="card-link-row">Explore SFTP <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <div class="col-lg-6">
+                <a href="{{ '/solutions/csv/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - CSV');}">
+                    <div class="icon-chip"><i class="fas fa-table"></i></div>
+                    <h3 class="card-title">Turn CSV chaos into clean JSON.</h3>
+                    <p class="card-text">Column selection, renaming, and reordering. Live preview and validation. JSON conversion and delivery with tracking.</p>
+                    <span class="card-link-row">Explore CSV <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <div class="col-lg-6">
+                <a href="{{ '/solutions/webforms/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Webforms');}">
+                    <div class="icon-chip icon-chip-teal"><i class="fas fa-file-arrow-up"></i></div>
+                    <h3 class="card-title">Accept uploads from anyone, safely.</h3>
+                    <p class="card-text">Visual builder with file and data field support. Secure, expiring document storage. Workflow and API integration built in.</p>
+                    <span class="card-link-row">Explore webforms <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <div class="col-lg-6">
+                <a href="{{ '/solutions/workflows/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Workflows');}">
+                    <div class="icon-chip icon-chip-ink"><i class="fas fa-diagram-project"></i></div>
+                    <h3 class="card-title">Build your ideal data flow.</h3>
+                    <p class="card-text">Event-driven, auditable workflows to translate, enrich, and route data anywhere. Format transforms, multi-destination routing, retries.</p>
+                    <span class="card-link-row">Explore workflows <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <div class="col-lg-6">
+                <a href="{{ '/solutions/canonical/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Canonical');}">
+                    <div class="icon-chip"><i class="fas fa-link"></i></div>
+                    <h3 class="card-title">Swap backends without breaking clients.</h3>
+                    <p class="card-text">Stable, secure, redirectable URLs to reference any object, across systems, APIs, or apps. Versioned and security-scoped.</p>
+                    <span class="card-link-row">Explore canonical URLs <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+
+            <div class="col-lg-12">
+                <a href="{{ '/solutions/vibe/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Vibe');}">
+                    <div class="icon-chip icon-chip-teal"><i class="fas fa-bolt"></i></div>
+                    <h3 class="card-title">Wrap your vibe-coded MVP in serious infrastructure.</h3>
+                    <p class="card-text">Drop-in support for SFTP, APIs, CSVs, and forms. Canonical links and protocol routing. Compliance and delivery tracking built in &mdash; keep shipping fast, without getting burned.</p>
+                    <span class="card-link-row">Explore vibe-code <i class="fas fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose (modernized) -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8 mx-auto text-center">
+                <span class="section-eyebrow">// Why SecureTransmit</span>
+                <h2 class="section-title">Built for enterprises that demand the highest levels of security and compliance.</h2>
+                <p class="section-subtitle mx-auto">Ephemeral by design when you want it. Audit-friendly always. Developer-first end to end.</p>
+            </div>
+        </div>
+
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
-                <div class="card feature-card h-100">
-                    <div class="card-body text-center">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3 class="card-title">Advanced Encryption</h3>
-                        <p class="card-text">AES-256 encryption with secure protocols including SFTP, FTPS, and HTTPS to protect your data in transit and at rest.</p>
-                    </div>
+                <div class="feature-card p-4 h-100">
+                    <div class="icon-chip"><i class="fas fa-shield-halved"></i></div>
+                    <h3 class="card-title">Advanced encryption</h3>
+                    <p class="card-text">AES-256 at rest, TLS in transit. SFTP, FTPS, HTTPS. Optional Sealed mode for payloads SecureTransmit moves but never decrypts.</p>
                 </div>
             </div>
-            
+
             <div class="col-lg-4 col-md-6">
-                <div class="card feature-card h-100">
-                    <div class="card-body text-center">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h3 class="card-title">Compliance Ready</h3>
-                        <p class="card-text">Automated compliance with GDPR, HIPAA, PCI DSS, and other regulatory standards with built-in audit trails and reporting.</p>
-                    </div>
+                <div class="feature-card p-4 h-100">
+                    <div class="icon-chip"><i class="fas fa-user-shield"></i></div>
+                    <h3 class="card-title">Paranoid mode</h3>
+                    <p class="card-text">Delete-on-ack. The moment the destination acknowledges, file data is gone. SHA-256 hash and audit record stay forever for non-repudiation.</p>
                 </div>
             </div>
-            
+
             <div class="col-lg-4 col-md-6">
-                <div class="card feature-card h-100">
-                    <div class="card-body text-center">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-plug"></i>
-                        </div>
-                        <h3 class="card-title">Seamless Integration</h3>
-                        <p class="card-text">Integrate with your existing tools and platforms including Salesforce, AWS, Google Drive, and enterprise security solutions.</p>
-                    </div>
+                <div class="feature-card p-4 h-100">
+                    <div class="icon-chip"><i class="fas fa-tower-observation"></i></div>
+                    <h3 class="card-title">Island mode</h3>
+                    <p class="card-text">Outbound-only architecture. Partners push to SecureTransmit, your systems pull from SecureTransmit. Close every inbound B2B port on your firewall.</p>
                 </div>
             </div>
-            
+
             <div class="col-lg-4 col-md-6">
-                <div class="card feature-card h-100">
-                    <div class="card-body text-center">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                        <h3 class="card-title">Real-Time Monitoring</h3>
-                        <p class="card-text">Monitor file transfers in real-time with instant alerts, detailed analytics, and comprehensive reporting capabilities.</p>
-                    </div>
+                <div class="feature-card p-4 h-100">
+                    <div class="icon-chip icon-chip-teal"><i class="fas fa-clipboard-check"></i></div>
+                    <h3 class="card-title">Compliance-ready audit</h3>
+                    <p class="card-text">Immutable, hash-verified audit records retained separately from file data. Query by partner, workflow, transaction, or time.</p>
                 </div>
             </div>
-            
+
             <div class="col-lg-4 col-md-6">
-                <div class="card feature-card h-100">
-                    <div class="card-body text-center">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-expand-arrows-alt"></i>
-                        </div>
-                        <h3 class="card-title">Enterprise Scalability</h3>
-                        <p class="card-text">Scale from small teams to multinational corporations with our flexible architecture designed for enterprise growth.</p>
-                    </div>
+                <div class="feature-card p-4 h-100">
+                    <div class="icon-chip icon-chip-teal"><i class="fas fa-bolt"></i></div>
+                    <h3 class="card-title">Real-time processing</h3>
+                    <p class="card-text">Event-driven by default. PUT fires a workflow, a webhook triggers a transform, an API call routes a payload &mdash; no waiting for batch jobs.</p>
                 </div>
             </div>
-            
+
             <div class="col-lg-4 col-md-6">
-                <div class="card feature-card h-100">
-                    <div class="card-body text-center">
-                        <div class="feature-icon mb-3">
-                            <i class="fas fa-headset"></i>
-                        </div>
-                        <h3 class="card-title">24/7 Support</h3>
-                        <p class="card-text">Dedicated enterprise support with SLA guarantees, technical expertise, and personalized onboarding assistance.</p>
-                    </div>
+                <div class="feature-card p-4 h-100">
+                    <div class="icon-chip icon-chip-ink"><i class="fas fa-terminal"></i></div>
+                    <h3 class="card-title">Developer-first</h3>
+                    <p class="card-text">REST API, signed webhooks, workflow version control, a sandbox environment. Everything a protocol person expects. Nothing a salesperson needs to unlock.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA Section -->
-<section class="cta-section py-4">
+<!-- Closing CTA -->
+<section class="cta-section">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h2 class="cta-title">Ready to Secure Your File Transfers?</h2>
-                <p class="cta-subtitle">Join businesses that trust Secure Transmit for their critical data transfers.</p>
+                <h2 class="cta-title">Stop duct-taping integrations together.</h2>
+                <p class="cta-subtitle">Self-serve. Starts at $5/mo. No contact sales.</p>
                 <div class="cta-buttons">
-                    <a href="/signup/" class="btn btn-primary btn-lg me-3" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Home Footer');}">Sign Up Free</a>
-                    <a href="/solutions/" class="btn btn-outline-light btn-lg">Learn More</a>
+                    {% if site.beta %}
+                    <a href="{{ site.beta_signup_url | relative_url }}" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Beta Access CTA Click - Home Footer');}">Request beta access</a>
+                    {% else %}
+                    <a href="{{ site.public_signup_url | relative_url }}" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Home Footer');}">Sign up</a>
+                    {% endif %}
+                    <a href="{{ '/documentation/' | relative_url }}" class="btn btn-outline-light btn-lg">Read the docs</a>
+                    <a href="{{ '/pricing/' | relative_url }}" class="btn btn-outline-light btn-lg">See pricing</a>
                 </div>
             </div>
         </div>
     </div>
-</section> 
+</section>

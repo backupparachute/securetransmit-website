@@ -5,27 +5,47 @@
             <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Secure Transmit" class="logo-landscape">
             <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="Secure Transmit" class="logo-stacked">
         </a>
-        
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto align-items-lg-center">
                 <li class="nav-item">
                     <a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{{ '/solutions/' | relative_url }}" id="solutionsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Solutions
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+                        <li><a class="dropdown-item" href="{{ '/solutions/' | relative_url }}">All solutions</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="{{ '/solutions/sftp/' | relative_url }}">Evented SFTP</a></li>
+                        <li><a class="dropdown-item" href="{{ '/solutions/csv/' | relative_url }}">CSV in, JSON out</a></li>
+                        <li><a class="dropdown-item" href="{{ '/solutions/edi/' | relative_url }}">EDI without legacy pain</a></li>
+                        <li><a class="dropdown-item" href="{{ '/solutions/webforms/' | relative_url }}">Secure webforms</a></li>
+                        <li><a class="dropdown-item" href="{{ '/solutions/workflows/' | relative_url }}">Workflow engine</a></li>
+                        <li><a class="dropdown-item" href="{{ '/solutions/canonical/' | relative_url }}">Canonical URLs</a></li>
+                        <li><a class="dropdown-item" href="{{ '/solutions/vibe/' | relative_url }}">Plug in your vibe code</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ '/solutions/' | relative_url }}">Solutions</a>
+                    <a class="nav-link" href="{{ '/pricing/' | relative_url }}">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ '/documentation/' | relative_url }}">Docs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ '/blog/' | relative_url }}">Blog</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ '/contact/' | relative_url }}">Contact</a>
-                </li>
                 <li class="nav-item ms-lg-2">
-                    <a class="nav-link btn btn-primary text-white px-3" href="{{ '/signup/' | relative_url }}" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Nav');}">Sign Up Free</a>
+                    {% if site.beta %}
+                    <a class="nav-link btn btn-primary text-white px-3" href="{{ site.beta_signup_url | relative_url }}" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Beta Access CTA Click - Nav');}">Request Beta Access</a>
+                    {% else %}
+                    <a class="nav-link btn btn-primary text-white px-3" href="{{ site.public_signup_url | relative_url }}" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Nav');}">Sign Up</a>
+                    {% endif %}
                 </li>
             </ul>
         </div>
@@ -33,4 +53,4 @@
 </nav>
 
 <!-- Spacer for fixed navbar -->
-<div class="navbar-spacer" style="height: 80px;"></div> 
+<div class="navbar-spacer" style="height: 80px;"></div>
