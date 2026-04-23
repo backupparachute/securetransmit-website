@@ -1,0 +1,255 @@
+---
+layout: default
+title: "Industrial Webhooks - Secure Transmit"
+description: "Receive webhooks without running a webhook receiver. Send webhooks with Stripe-grade reliability. Typed events, signing, replay, dead-letter — all in one gateway."
+---
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="hero-title">Industrial webhooks. In and out.</h1>
+                <p class="hero-subtitle">Receive webhooks without running a webhook receiver. Send webhooks with Stripe-grade reliability. Typed events, signed payloads, replay, and dead-letter &mdash; baked in.</p>
+                <div class="hero-buttons">
+                    {% if site.beta %}
+                    <a href="{{ site.beta_signup_url | relative_url }}" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Beta Access CTA Click - Webhooks Hero');}">Request beta access</a>
+                    {% else %}
+                    <a href="{{ site.public_signup_url | relative_url }}" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Webhooks Hero');}">Sign up</a>
+                    {% endif %}
+                    <a href="{{ '/documentation/' | relative_url }}" class="btn btn-outline-light btn-lg">Read the docs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section (keep as 3 horizontal summary cards) -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-inbox"></i>
+                        </div>
+                        <h3 class="card-title">Receive anywhere</h3>
+                        <p class="card-text">Register SecureTransmit as your public webhook endpoint. We receive, verify, retry, and route into your workflow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-paper-plane"></i>
+                        </div>
+                        <h3 class="card-title">Send reliably</h3>
+                        <p class="card-text">Emit typed, signed events to your partners with exponential backoff, dead-letter, and replay &mdash; the pattern Stripe made famous.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card feature-card h-100">
+                    <div class="card-body text-center">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3 class="card-title">Trustworthy by default</h3>
+                        <p class="card-text">Every webhook is signed, timestamped, replay-guarded, and logged to the same immutable audit trail as your file transfers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features intro -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <span class="section-eyebrow">// How it works</span>
+                <h2 class="section-title">Webhooks, but industrial.</h2>
+                <p class="section-subtitle mx-auto">Stop running a webhook receiver. Stop hand-rolling retries. Stop patching signature bugs on a Friday.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 1 (field map — endpoint mapping) — Receive without a receiver -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// 01 &middot; Receive</span>
+                <h2>Point partners at us. Not at you.</h2>
+                <p class="feature-lead">Register a SecureTransmit endpoint as your public webhook URL. We terminate TLS, verify signatures, deduplicate, and deliver a clean event into your workflow.</p>
+                <ul class="feature-list">
+                    <li>Public endpoint, no receiver to run</li>
+                    <li>Signature verification &amp; replay protection</li>
+                    <li>Deduplication by event ID</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-map-label">
+                    <span>Partner sends to</span><span></span><span>Your workflow sees</span>
+                </div>
+                <div class="feature-map">
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">hooks.st.io/acme/orders</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">wf: ingest-orders</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">hooks.st.io/acme/stripe</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">wf: sync-payments</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">hooks.st.io/acme/shipments</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">wf: update-wms</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">hooks.st.io/acme/support</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">wf: route-tickets</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 2 (JSON panel) — Typed events -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// 02 &middot; Typed events</span>
+                <h2>Events with a shape. Not a shrug.</h2>
+                <p class="feature-lead">Every event is typed, versioned, and signed. Your consumer sees a clean envelope with a guaranteed schema &mdash; not whatever the partner felt like sending that day.</p>
+                <ul class="feature-list">
+                    <li>Versioned event schemas</li>
+                    <li>HMAC-SHA256 signing</li>
+                    <li>Stable event ID + timestamp</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-terminal">
+                    <div class="feature-terminal-bar">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="name">POST hooks.st.io/acme/orders</span>
+                    </div>
+<pre>{
+  <span class="tk-key">"event"</span><span class="tk-punct">:</span> <span class="tk-str">"order.created"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"version"</span><span class="tk-punct">:</span> <span class="tk-str">"2026-01"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"id"</span><span class="tk-punct">:</span> <span class="tk-str">"evt_7fc29a4e"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"created"</span><span class="tk-punct">:</span> <span class="tk-str">"2026-04-23T14:22:07Z"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"signature"</span><span class="tk-punct">:</span> <span class="tk-str">"sha256=9f86d081&hellip;"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"data"</span><span class="tk-punct">:</span> {
+    <span class="tk-key">"order_id"</span><span class="tk-punct">:</span> <span class="tk-str">"o_4829"</span><span class="tk-punct">,</span>
+    <span class="tk-key">"total"</span><span class="tk-punct">:</span> <span class="tk-num">49.00</span><span class="tk-punct">,</span>
+    <span class="tk-key">"verified"</span><span class="tk-punct">:</span> <span class="tk-bool">true</span>
+  }
+}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 3 (stats grid) — Stripe-grade reliability -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// 03 &middot; Reliability</span>
+                <h2>Stripe-grade delivery. Without the Stripe engineering team.</h2>
+                <p class="feature-lead">Outbound webhooks send with exponential backoff, dead-letter queues, configurable retry windows, and replay on demand. If a consumer is down for a weekend, your events wait.</p>
+                <ul class="feature-list">
+                    <li>Exponential backoff, up to 7 days</li>
+                    <li>Dead-letter queue with manual replay</li>
+                    <li>Per-endpoint circuit breakers</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-stats">
+                    <div class="feature-stat">
+                        <div class="feature-stat-value">7d<span class="unit">retry window</span></div>
+                        <div class="feature-stat-label">exponential backoff</div>
+                    </div>
+                    <div class="feature-stat">
+                        <div class="feature-stat-value">24<span class="unit">attempts</span></div>
+                        <div class="feature-stat-label">per event, max</div>
+                    </div>
+                    <div class="feature-stat">
+                        <div class="feature-stat-value">&infin;<span class="unit">replay</span></div>
+                        <div class="feature-stat-label">any event, any time</div>
+                    </div>
+                    <div class="feature-stat">
+                        <div class="feature-stat-value">0<span class="unit">dropped</span></div>
+                        <div class="feature-stat-label">dead-letter or delivered</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 4 (hash / record) — Signed + audited -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// 04 &middot; Proof</span>
+                <h2>Signed, timestamped, on the audit trail.</h2>
+                <p class="feature-lead">Every webhook &mdash; in or out &mdash; gets an immutable audit record with signature, timestamp, delivery outcome, and retry history. Settle arguments in seconds.</p>
+                <ul class="feature-list">
+                    <li>HMAC signature verification</li>
+                    <li>Replay-window protection</li>
+                    <li>Immutable delivery record</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-hash">
+                    <div class="feature-hash-label">HMAC-SHA256 &middot; signature</div>
+                    <div class="feature-hash-value">sha256=9f86d081&#8239;884c7d65&#8239;9a2feaa0&#8239;c55ad015<br>a3bf4f1b&#8239;2b0b822c&#8239;d15d6c15&#8239;b0f00a08</div>
+                    <dl class="feature-hash-meta">
+                        <dt>Event</dt><dd>evt_7fc29a4e &middot; order.created (v2026-01)</dd>
+                        <dt>Direction</dt><dd>inbound &middot; acme-supply</dd>
+                        <dt>Workflow</dt><dd>ingest-orders</dd>
+                        <dt>Delivered</dt><dd>2026-04-23 14:22:08 UTC &middot; 1 retry</dd>
+                        <dt>Status</dt><dd><span class="ok">&check; 204 OK</span></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="cta-title">Stop running a webhook receiver.</h2>
+                <p class="cta-subtitle">Let us be your public surface. You focus on the events, not the infrastructure.</p>
+                <div class="cta-buttons">
+                    {% if site.beta %}
+                    <a href="{{ site.beta_signup_url | relative_url }}" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Beta Access CTA Click - Webhooks Footer');}">Request beta access</a>
+                    {% else %}
+                    <a href="{{ site.public_signup_url | relative_url }}" class="btn btn-primary btn-lg" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Signup CTA Click - Webhooks Footer');}">Sign up</a>
+                    {% endif %}
+                    <a href="{{ '/documentation/' | relative_url }}" class="btn btn-outline-light btn-lg">Read the docs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

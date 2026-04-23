@@ -62,82 +62,161 @@ description: "Seamless EDI for business transactions. Secure, compliant, and aut
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Features intro -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row text-center mb-5">
+        <div class="row text-center">
             <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">EDI That Works for Modern Business</h2>
-                <p class="section-subtitle">From legacy EDI to modern integration, we handle the complexity so you can focus on your business.</p>
+                <span class="section-eyebrow">// How it works</span>
+                <h2 class="section-title">EDI that works for modern business.</h2>
+                <p class="section-subtitle mx-auto">From legacy EDI to modern integration &mdash; we handle the complexity so you can focus on your business.</p>
             </div>
         </div>
-        
-        <div class="row g-4">
+    </div>
+</section>
+
+<!-- Feature 1 (badge cluster) — Standard EDI Support -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip me-3 mb-0"><i class="fas fa-file-lines"></i></div>
-                            <h3 class="card-title mb-0">Standard EDI Support</h3>
+                <span class="feature-eyebrow">// 01 &middot; Standards</span>
+                <h2>Every standard your partners speak.</h2>
+                <p class="feature-lead">X12, EDIFACT, and industry-specific variants &mdash; onboard new trading partners without rebuilding parsers or negotiating format.</p>
+                <ul class="feature-list">
+                    <li>ANSI X12 standards (850, 810, 856, 997, &hellip;)</li>
+                    <li>EDIFACT (ORDERS, INVOIC, DESADV, CONTRL)</li>
+                    <li>Industry-specific variants and custom schemas</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-badges">
+                    <span class="feature-badge is-lg"><i class="fas fa-check"></i> ANSI X12</span>
+                    <span class="feature-badge is-lg"><i class="fas fa-check"></i> EDIFACT</span>
+                    <span class="feature-badge">850 Purchase Order</span>
+                    <span class="feature-badge">810 Invoice</span>
+                    <span class="feature-badge">856 ASN</span>
+                    <span class="feature-badge">997 Ack</span>
+                    <span class="feature-badge">ORDERS</span>
+                    <span class="feature-badge">INVOIC</span>
+                    <span class="feature-badge">DESADV</span>
+                    <span class="feature-badge">CONTRL</span>
+                    <span class="feature-badge is-muted">+ custom schemas</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 2 (terminal) — Intelligent Mapping & Validation -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// 02 &middot; Validation</span>
+                <h2>Pre-flight validation, every document.</h2>
+                <p class="feature-lead">Validate in real time. Missing segments, invalid values, schema mismatches &mdash; caught before the document leaves your side. No surprises on your partner's end.</p>
+                <ul class="feature-list">
+                    <li>Real-time validation</li>
+                    <li>Schema compliance checking</li>
+                    <li>Pre-delivery error detection</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-terminal">
+                    <div class="feature-terminal-bar">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="name">edi-validator &mdash; 850 purchase order</span>
+                    </div>
+<pre><span class="tk-dim">parsing X12 850 &middot; ISA control 000012547 &hellip;</span>
+<span class="tk-ok">&check;</span> envelope valid (ISA/GS/ST)
+<span class="tk-ok">&check;</span> 14 line items parsed
+<span class="tk-warn">!</span> PO1*3  &middot; <span class="tk-dim">qty</span> <span class="tk-arrow">&rarr;</span> expected int, got <span class="tk-str">"TBD"</span>
+<span class="tk-warn">!</span> DTM*002 missing <span class="tk-dim">(required date)</span>
+
+<span class="tk-dim">summary:</span> 12 valid &middot; <span class="tk-warn">2 errors</span>
+<span class="tk-arrow">&rarr;</span> holding 850 &middot; 997 rejection drafted
+<span class="tk-arrow">&rarr;</span> notified <span class="tk-str">"acme-supply"</span> &middot; awaiting resubmit</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 3 (flow diagram) — Format Conversion & Delivery -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// 03 &middot; Delivery</span>
+                <h2>Transform EDI into whatever lives downstream.</h2>
+                <p class="feature-lead">Parse, normalize, convert to JSON/XML/flat &mdash; then ship to your API, SFTP, or ERP with retries and functional acknowledgments.</p>
+                <ul class="feature-list">
+                    <li>EDI to JSON/XML conversion</li>
+                    <li>Multi-destination delivery</li>
+                    <li>997 / CONTRL acknowledgment handling</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-flow">
+                    <div class="feature-flow-node">
+                        <span class="flow-label">Trading partner</span>
+                        <span class="flow-tag">X12 850</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-node is-emphasis">
+                        <span class="flow-label">Parse + validate + transform</span>
+                        <span class="flow-tag">SecureTransmit</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-branch">
+                        <div class="feature-flow-node">
+                            <span class="flow-label">Your ERP</span>
+                            <span class="flow-tag">JSON</span>
                         </div>
-                        <p class="card-text">We support all major formats, X12, EDIFACT, and industry-specific variants, so you can onboard trading partners without friction.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>ANSI X12 standards</li>
-                            <li><i class="fas fa-check text-success me-2"></i>EDIFACT compliance</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Industry-specific variants</li>
-                        </ul>
+                        <div class="feature-flow-node">
+                            <span class="flow-label">Your API</span>
+                            <span class="flow-tag">REST</span>
+                        </div>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-node">
+                        <span class="flow-label">997 Functional Ack</span>
+                        <span class="flow-tag">back to partner</span>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 4 (hash / record) — Compliance & Audit Trail -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip icon-chip-teal me-3 mb-0"><i class="fas fa-wand-magic-sparkles"></i></div>
-                            <h3 class="card-title mb-0">Intelligent Mapping & Validation</h3>
-                        </div>
-                        <p class="card-text">Validate every document in real time. Auto-warn on missing segments, invalid values, or schema mismatches, pre-flight before delivery.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Real-time validation</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Schema compliance checking</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Pre-delivery error detection</li>
-                        </ul>
-                    </div>
-                </div>
+                <span class="feature-eyebrow">// 04 &middot; Audit</span>
+                <h2>Every document, every control number, forever.</h2>
+                <p class="feature-lead">Track every transaction with control numbers, file hashes, timestamps, and functional ack status. If a partner asks "did you send it," you have the receipt.</p>
+                <ul class="feature-list">
+                    <li>Complete transaction tracking</li>
+                    <li>Control number management</li>
+                    <li>997 / CONTRL acknowledgments stored</li>
+                </ul>
             </div>
-            
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip icon-chip-ink me-3 mb-0"><i class="fas fa-shuffle"></i></div>
-                            <h3 class="card-title mb-0">Format Conversion & Delivery</h3>
-                        </div>
-                        <p class="card-text">Transform EDI into JSON, XML, or flat files, then post it to your API, SFTP, or ERP system with full acknowledgment and retry support.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>EDI to JSON/XML conversion</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Multi-destination delivery</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Automatic retry logic</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip me-3 mb-0"><i class="fas fa-clipboard-check"></i></div>
-                            <h3 class="card-title mb-0">Compliance & Audit Trail</h3>
-                        </div>
-                        <p class="card-text">Track every transaction, partner, and message. Store control numbers, file hashes, user/timestamp metadata, and acknowledgments (997/CONTRL).</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Complete transaction tracking</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Control number management</li>
-                            <li><i class="fas fa-check text-success me-2"></i>997/CONTRL acknowledgments</li>
-                        </ul>
-                    </div>
+                <div class="feature-hash">
+                    <div class="feature-hash-label">SHA-256 &middot; EDI envelope</div>
+                    <div class="feature-hash-value">7c2f4d81&#8239;9a4c3e22&#8239;88f1d44a&#8239;b3e0ca9f<br>e5dc21b4&#8239;ffa9018c&#8239;2b7d90e5&#8239;44e10a2b</div>
+                    <dl class="feature-hash-meta">
+                        <dt>Doc</dt><dd>X12 850 &middot; ISA 000012547</dd>
+                        <dt>Partner</dt><dd>acme-supply (ISA ID 0073891)</dd>
+                        <dt>Mapped to</dt><dd>orders_v4.json</dd>
+                        <dt>Recorded</dt><dd>2026-04-23 14:22:07 UTC</dd>
+                        <dt>997 Ack</dt><dd><span class="ok">&check; accepted 14:22:31 UTC</span></dd>
+                    </dl>
                 </div>
             </div>
         </div>

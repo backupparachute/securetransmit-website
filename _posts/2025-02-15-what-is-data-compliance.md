@@ -159,7 +159,7 @@ Secure Transmit employs end-to-end encryption, ensuring that data remains secure
 
 ### 2. Compliance-Ready Design
 
-Secure Transmit is built with compliance at its core, supporting GDPR, HIPAA, and PCI DSS standards. The platform automates compliance monitoring and generates detailed reports, simplifying audits and reducing the risk of penalties. A 2025 Gartner report revealed that businesses that [implemented automated compliance tools](https://honestivalues.com/en/blogs/blog-automating-compliance-processes-with-software-37109) had 43% reduction compliance issues.
+Secure Transmit is built with the primitives teams need to build workflows for frameworks like GDPR, HIPAA, and PCI DSS &mdash; immutable audit trails, hash-verified records, configurable retention, and Paranoid mode (delete-on-ack). Those controls, paired with detailed audit reporting, simplify audits and reduce the risk of penalties. A 2025 Gartner report revealed that businesses that [implemented automated compliance tools](https://honestivalues.com/en/blogs/blog-automating-compliance-processes-with-software-37109) had 43% reduction compliance issues.
 
 ### 3. Customizable Access Controls
 
@@ -197,7 +197,7 @@ Key regulations include GDPR (EU), CCPA (California), HIPAA (US healthcare), PCI
 
 **How does Secure Transmit help with data compliance?**
 
-Secure Transmit offers end-to-end encryption, automated compliance reporting, and customizable access controls, ensuring adherence to standards like GDPR and HIPAA.
+Secure Transmit offers end-to-end encryption, immutable audit reporting, and customizable access controls &mdash; the primitives teams need to build workflows that meet standards like GDPR and HIPAA.
 
 **What happens if a company fails to comply with data regulations?**
 

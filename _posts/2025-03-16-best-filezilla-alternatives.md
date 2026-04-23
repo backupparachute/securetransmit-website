@@ -214,7 +214,7 @@ Yes, Secure Transmit and CuteFTP offer automation features such as scheduled fil
 
 **What is the most secure alternative to FileZilla?**
 
-Secure Transmit provides the highest level of security with end-to-end encryption, multi-factor authentication, and compliance with industry security standards such as HIPAA and SOC 2.
+Secure Transmit provides strong security with end-to-end encryption, multi-factor authentication, immutable audit trails, and Paranoid mode for ephemeral handling &mdash; the primitives teams need to build workflows that meet standards like HIPAA and SOC 2.
 
 **Can I self-host an FTP alternative?**
 

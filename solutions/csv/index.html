@@ -63,82 +63,171 @@ description: "The last CSV import tool you'll ever need. Turn messy spreadsheets
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Features intro -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row text-center mb-5">
+        <div class="row text-center">
             <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">Transform Your Data Workflow</h2>
-                <p class="section-subtitle">From messy spreadsheets to clean, structured data, all without writing a single line of code.</p>
+                <span class="section-eyebrow">// How it works</span>
+                <h2 class="section-title">Transform your data workflow.</h2>
+                <p class="section-subtitle mx-auto">From messy spreadsheets to clean, structured data &mdash; without writing a single line of code.</p>
             </div>
         </div>
-        
-        <div class="row g-4">
+    </div>
+</section>
+
+<!-- Feature 1 (field map) — Drag, Map, Upload -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip me-3 mb-0"><i class="fas fa-arrows-rotate"></i></div>
-                            <h3 class="card-title mb-0">Drag, Map, Upload</h3>
-                        </div>
-                        <p class="card-text">Upload any CSV, we'll help your users match columns, rename fields, and reorder them visually. Our intuitive interface makes data mapping as simple as drag and drop.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Visual column mapping interface</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Automatic data type detection</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Bulk field renaming and reordering</li>
-                        </ul>
+                <span class="feature-eyebrow">// 01 &middot; Mapping</span>
+                <h2>Drag, map, upload.</h2>
+                <p class="feature-lead">Upload any CSV and we'll help your users match columns, rename fields, and reorder them visually. Data mapping as simple as drag and drop.</p>
+                <ul class="feature-list">
+                    <li>Visual column mapping interface</li>
+                    <li>Automatic data type detection</li>
+                    <li>Bulk field renaming and reordering</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-map-label">
+                    <span>CSV column</span><span></span><span>API field</span>
+                </div>
+                <div class="feature-map">
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">customer_id</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">customerId</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">Order Date</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">purchasedAt</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">amount_usd</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">amount</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">sku</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">productSku</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">email_address</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">contact.email</span>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 2 (terminal — validation output) — Built-in Validation -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip icon-chip-teal me-3 mb-0"><i class="fas fa-broom"></i></div>
-                            <h3 class="card-title mb-0">Built-in Validation</h3>
-                        </div>
-                        <p class="card-text">Check for required fields, bad values, missing data, or type mismatches before delivery. Our validation engine ensures data quality at every step.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Real-time validation feedback</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Custom validation rules</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Error highlighting and reporting</li>
-                        </ul>
+                <span class="feature-eyebrow">// 02 &middot; Validation</span>
+                <h2>Catch bad data before delivery.</h2>
+                <p class="feature-lead">Check for required fields, bad values, missing data, or type mismatches before anything leaves your ingest. Validation fails loudly, not silently.</p>
+                <ul class="feature-list">
+                    <li>Real-time validation feedback</li>
+                    <li>Custom validation rules</li>
+                    <li>Error highlighting and reporting</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-terminal">
+                    <div class="feature-terminal-bar">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="name">validator &mdash; orders-2026-04-23.csv</span>
                     </div>
+<pre><span class="tk-dim">reading 1,284 rows &hellip;</span>
+<span class="tk-ok">&check;</span> schema matched
+<span class="tk-ok">&check;</span> types inferred
+<span class="tk-warn">!</span> row 47  &middot; <span class="tk-dim">amount_usd</span> <span class="tk-arrow">&rarr;</span> expected number, got <span class="tk-str">"$49.00"</span>
+<span class="tk-warn">!</span> row 103 &middot; <span class="tk-dim">email_address</span> missing
+<span class="tk-warn">!</span> row 290 &middot; <span class="tk-dim">Order Date</span> unparsable
+
+<span class="tk-dim">summary:</span> 1,281 valid &middot; <span class="tk-warn">3 blocked</span>
+<span class="tk-dim">&rarr; delivery paused. fix and resubmit.</span></pre>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 3 (JSON panel) — JSON Conversion + Auto Delivery -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip icon-chip-ink me-3 mb-0"><i class="fas fa-code"></i></div>
-                            <h3 class="card-title mb-0">JSON Conversion + Auto Delivery</h3>
-                        </div>
-                        <p class="card-text">Transform your CSV into structured JSON and POST it to your API with retry, tracking, and delivery logs. Set it up once, run it forever.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Automatic JSON transformation</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Configurable retry logic</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Comprehensive delivery tracking</li>
-                        </ul>
+                <span class="feature-eyebrow">// 03 &middot; Delivery</span>
+                <h2>Clean JSON, delivered automatically.</h2>
+                <p class="feature-lead">Transform every row into structured JSON and POST it to your API with retries, tracking, and delivery logs. Set it up once, run it forever.</p>
+                <ul class="feature-list">
+                    <li>Automatic JSON transformation</li>
+                    <li>Configurable retry logic</li>
+                    <li>Comprehensive delivery tracking</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-terminal">
+                    <div class="feature-terminal-bar">
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="name">POST api.acme.com/orders</span>
                     </div>
+<pre>{
+  <span class="tk-key">"customerId"</span><span class="tk-punct">:</span> <span class="tk-str">"acme-482"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"productSku"</span><span class="tk-punct">:</span> <span class="tk-str">"WIDGET-14"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"amount"</span><span class="tk-punct">:</span> <span class="tk-num">49.00</span><span class="tk-punct">,</span>
+  <span class="tk-key">"purchasedAt"</span><span class="tk-punct">:</span> <span class="tk-str">"2026-04-23T14:22:07Z"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"contact"</span><span class="tk-punct">:</span> {
+    <span class="tk-key">"email"</span><span class="tk-punct">:</span> <span class="tk-str">"ops@acme.com"</span>
+  }<span class="tk-punct">,</span>
+  <span class="tk-key">"verified"</span><span class="tk-punct">:</span> <span class="tk-bool">true</span>
+}
+
+<span class="tk-ok">&check;</span> <span class="tk-dim">204 OK &middot; 84ms &middot; retries: 0</span></pre>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 4 (hash / record) — Audit Everything -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip me-3 mb-0"><i class="fas fa-shield-halved"></i></div>
-                            <h3 class="card-title mb-0">Audit Everything</h3>
-                        </div>
-                        <p class="card-text">Every import is logged. Every row tracked. Every transformation hashed. Maintain complete visibility into your data processing pipeline.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Complete audit trail</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Data transformation history</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Compliance-ready reporting</li>
-                        </ul>
-                    </div>
+                <span class="feature-eyebrow">// 04 &middot; Audit</span>
+                <h2>Every row, logged. Every transform, hashed.</h2>
+                <p class="feature-lead">Each import writes an immutable audit record with file hash, row count, transform version, and delivery outcome. Answers for the auditor, always.</p>
+                <ul class="feature-list">
+                    <li>Complete audit trail</li>
+                    <li>Data transformation history</li>
+                    <li>Compliance-ready reporting</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-hash">
+                    <div class="feature-hash-label">SHA-256 &middot; import record</div>
+                    <div class="feature-hash-value">a3f1e4d2&#8239;b7c9806f&#8239;31e5a22c&#8239;88d440ba<br>0e9c7f1b&#8239;44a2bb31&#8239;fce50aa7&#8239;bc20d3e9</div>
+                    <dl class="feature-hash-meta">
+                        <dt>File</dt><dd>orders-2026-04-23.csv &middot; 1,281 rows</dd>
+                        <dt>Mapping</dt><dd>orders_v4 (rev 12)</dd>
+                        <dt>Delivered</dt><dd>api.acme.com/orders</dd>
+                        <dt>Recorded</dt><dd>2026-04-23 14:22:07 UTC</dd>
+                        <dt>Status</dt><dd><span class="ok">&check; 1,281 / 1,281 delivered</span></dd>
+                    </dl>
                 </div>
             </div>
         </div>

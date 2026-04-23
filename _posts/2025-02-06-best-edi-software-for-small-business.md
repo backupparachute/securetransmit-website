@@ -183,7 +183,7 @@ Secure Transmit employs advanced encryption techniques to protect data during tr
 
 ### 2. Compliance with Regulations
 
-The platform is designed to meet global data protection standards, including GDPR, HIPAA, and PCI DSS. This ensures that businesses remain compliant while exchanging sensitive information.
+The platform is designed with the primitives teams need to build workflows that meet global data protection standards like GDPR, HIPAA, and PCI DSS &mdash; immutable audit trails, hash-verified records, configurable retention, and Paranoid mode for ephemeral handling.
 
 ### 3. Real-Time Monitoring
 

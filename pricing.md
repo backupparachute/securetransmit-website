@@ -9,7 +9,7 @@ SecureTransmit is currently in closed beta. Access is by approval and billing is
 | | Solo | Pro | Business | Enterprise |
 |---|---|---|---|---|
 | **Price** | $5 / mo (or $50 / yr) | $49 / mo | $249 / mo | From $5,000 / mo, annual, quoted |
-| **Positioning** | A paid floor, not a free tier | Where most real work happens | Team + compliance | Custom retention, HIPAA BAA, SCIM |
+| **Positioning** | A paid floor, not a free tier | Where most real work happens | Team + compliance | Custom retention, SCIM, dedicated support |
 
 ## Volume & limits
 
@@ -54,7 +54,6 @@ SecureTransmit is currently in closed beta. Access is by approval and billing is
 | Custom domains | 0 | 1 | 5 | Unlimited |
 | SSO / SAML | — | — | Yes | Yes |
 | SCIM, RBAC, audit log export | — | — | Add-on | Yes |
-| HIPAA BAA | — | — | — | Yes |
 | Support | Community | Email | Priority (24h SLA) | Dedicated |
 
 ## Tier philosophy
@@ -65,7 +64,7 @@ SecureTransmit is currently in closed beta. Access is by approval and billing is
 
 **Business adds team and compliance features.** SSO, geo-blocking, higher throughput, priority support. Plus full retention configurability.
 
-**Enterprise starts at $5k/mo.** Custom retention, HIPAA BAA, dedicated support, SCIM, audit log export. Founding rates available for design partners — contact us.
+**Enterprise starts at $5k/mo.** Custom retention, dedicated support, SCIM, audit log export. Founding rates available for design partners — contact us.
 
 ## FAQ
 

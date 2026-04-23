@@ -117,7 +117,7 @@ Some Mulesoft alternatives focus on **security and compliance**, while others ex
 - **End-to-end encrypted data integration and file transfers** for maximum security
 - **Scalable infrastructure** suitable for small businesses to large enterprises
 - **No-code and low-code options** for faster implementation and ease of use
-- **Built-in compliance with SOC 2, HIPAA, and GDPR** to meet strict regulatory standards
+- **Compliance-ready primitives** &mdash; immutable audit trails, configurable retention, and Paranoid mode for ephemeral handling
 - **Optimized for multi-cloud and hybrid cloud environments**
 
 #### Best For:
@@ -294,7 +294,7 @@ Jitterbit and Celigo provide enterprise-grade features at a more budget-friendly
 
 **What is the most secure alternative to Mulesoft?**
 
-Secure Transmit is the best choice for businesses prioritizing security. It offers end-to-end encryption, role-based access controls, and built-in compliance with SOC 2, HIPAA, and GDPR, ensuring data privacy and regulatory adherence. Secure Transmit is ideal for financial institutions, healthcare providers, and enterprises handling sensitive data.
+Secure Transmit is a strong choice for businesses prioritizing security. It offers end-to-end encryption, role-based access controls, immutable audit trails, and Paranoid mode (delete-on-ack) for ephemeral handling &mdash; the architectural primitives teams need to build compliant workflows for frameworks like SOC 2, HIPAA, and GDPR.
 
 **Can I use an open-source alternative to Mulesoft?**
 

@@ -63,82 +63,142 @@ description: "One link to rule your data. Create stable, redirectable, versioned
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Features intro -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row text-center mb-5">
+        <div class="row text-center">
             <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">Stable Links for Modern Architecture</h2>
-                <p class="section-subtitle">Replace brittle direct URLs with intelligent, versioned pointers that work across your entire ecosystem.</p>
+                <span class="section-eyebrow">// How it works</span>
+                <h2 class="section-title">Stable links for modern architecture.</h2>
+                <p class="section-subtitle mx-auto">Replace brittle direct URLs with intelligent, versioned pointers that work across your entire ecosystem.</p>
             </div>
         </div>
-        
-        <div class="row g-4">
+    </div>
+</section>
+
+<!-- Feature 1 (field map — url rewrite) — Obfuscate & Redirect -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip me-3 mb-0"><i class="fas fa-shuffle"></i></div>
-                            <h3 class="card-title mb-0">Obfuscate & Redirect</h3>
-                        </div>
-                        <p class="card-text">Replace brittle direct URLs with stable short links that can redirect anywhere, with full access control and security policies.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Short, memorable URLs</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Flexible redirect rules</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Access control integration</li>
-                        </ul>
+                <span class="feature-eyebrow">// 01 &middot; Redirect</span>
+                <h2>One stable link. Anywhere it needs to go.</h2>
+                <p class="feature-lead">Replace brittle direct URLs with short, stable canonicals that can redirect anywhere &mdash; with access control and security policies baked in.</p>
+                <ul class="feature-list">
+                    <li>Short, memorable URLs</li>
+                    <li>Flexible redirect rules</li>
+                    <li>Access control integration</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-map-label">
+                    <span>Canonical URL</span><span></span><span>Resolves to</span>
+                </div>
+                <div class="feature-map">
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/inv/2026-1042</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">erp.internal/invoices/987342</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/po/acme-14</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">legacy.acme/po?id=14</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/asn/7f29a</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">wms.acme/shipments/7f29a</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/doc/contract-v3</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">s3://docs/contracts/v3.pdf</span>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 2 (badge cluster) — Multi-Identifier Access -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip icon-chip-teal me-3 mb-0"><i class="fas fa-compass"></i></div>
-                            <h3 class="card-title mb-0">Multi-Identifier Access</h3>
-                        </div>
-                        <p class="card-text">Access canonical URLs via slug, UUID, or integer ID, ideal for legacy and modern systems that need flexible identifier support.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Multiple identifier formats</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Legacy system compatibility</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Consistent API access</li>
-                        </ul>
-                    </div>
+                <span class="feature-eyebrow">// 02 &middot; Identifiers</span>
+                <h2>One object. Every identifier your stack speaks.</h2>
+                <p class="feature-lead">Resolve the same canonical by human-friendly slug, UUID, or integer ID &mdash; whatever your legacy system, your new API, or your partner expects.</p>
+                <ul class="feature-list">
+                    <li>Multiple identifier formats</li>
+                    <li>Legacy system compatibility</li>
+                    <li>Consistent API access</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-badges">
+                    <span class="feature-badge is-lg"><i class="fas fa-link"></i> same object</span>
+                    <span class="feature-badge">/inv/2026-1042</span>
+                    <span class="feature-badge">slug</span>
+                    <span class="feature-badge">7fc29a4e-5e8b-11ef-95a7</span>
+                    <span class="feature-badge">UUID</span>
+                    <span class="feature-badge">987342</span>
+                    <span class="feature-badge">int ID</span>
+                    <span class="feature-badge is-muted">canonical</span>
                 </div>
             </div>
-            
-            <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip icon-chip-ink me-3 mb-0"><i class="fas fa-shield-halved"></i></div>
-                            <h3 class="card-title mb-0">Security-Aware Links</h3>
-                        </div>
-                        <p class="card-text">Mark URLs as public, private, or protected, control visibility and attach access tokens for enterprise-grade security.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Granular access controls</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Token-based authentication</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Audit trail integration</li>
-                        </ul>
-                    </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 3 (gradient wash) — Security-Aware Links -->
+<section class="feature-row feature-row-wash">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+                <span class="feature-eyebrow">// 03 &middot; Security</span>
+                <h2>Every link knows its audience.</h2>
+                <p class="feature-lead">Mark URLs public, private, or token-scoped. Control who resolves what &mdash; and log every resolution to the same audit trail as your file transfers.</p>
+                <ul class="feature-list">
+                    <li>Granular access controls</li>
+                    <li>Token-based authentication</li>
+                    <li>Audit trail integration</li>
+                </ul>
+            </div>
+            <div class="col-lg-5 text-center">
+                <div class="feature-wash-mark">
+                    <i class="fas fa-shield-halved"></i>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 4 (hash / record with metadata) — Metadata-Enhanced -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip me-3 mb-0"><i class="fas fa-tags"></i></div>
-                            <h3 class="card-title mb-0">Metadata-Enhanced</h3>
-                        </div>
-                        <p class="card-text">Attach 1:N key-value metadata to any link, retrievable via HTTP headers or API. Enrich your links with context and business logic.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Flexible metadata storage</li>
-                            <li><i class="fas fa-check text-success me-2"></i>HTTP header integration</li>
-                            <li><i class="fas fa-check text-success me-2"></i>API-based metadata access</li>
-                        </ul>
-                    </div>
+                <span class="feature-eyebrow">// 04 &middot; Metadata</span>
+                <h2>Attach context. Read it back anywhere.</h2>
+                <p class="feature-lead">Hang arbitrary key/value metadata on any canonical, retrievable via HTTP headers or JSON API. Routing hints, version tags, partner IDs &mdash; travel with the link.</p>
+                <ul class="feature-list">
+                    <li>Flexible metadata storage</li>
+                    <li>HTTP header integration</li>
+                    <li>API-based metadata access</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-hash">
+                    <div class="feature-hash-label">GET /inv/2026-1042 &middot; HEAD</div>
+                    <div class="feature-hash-value">HTTP/2 302 Found<br>Location: erp.internal/invoices/987342</div>
+                    <dl class="feature-hash-meta">
+                        <dt>X-Canonical</dt><dd>inv/2026-1042</dd>
+                        <dt>X-Version</dt><dd>v3</dd>
+                        <dt>X-Partner</dt><dd>acme-supply</dd>
+                        <dt>X-Scope</dt><dd>internal &middot; token required</dd>
+                        <dt>X-Revision</dt><dd><span class="ok">current</span> (3 historical)</dd>
+                    </dl>
                 </div>
             </div>
         </div>

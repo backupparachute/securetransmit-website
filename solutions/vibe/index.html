@@ -63,82 +63,169 @@ description: "You built fast. We make it durable. Build fast. Stay fast. Let Sec
     </div>
 </section>
 
-<!-- Features Section -->
+<!-- Features intro -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row text-center mb-5">
+        <div class="row text-center">
             <div class="col-lg-8 mx-auto">
-                <h2 class="section-title">Infrastructure That Grows With You</h2>
-                <p class="section-subtitle">Keep your development velocity while adding enterprise-grade capabilities to your application.</p>
+                <span class="section-eyebrow">// How it works</span>
+                <h2 class="section-title">Infrastructure that grows with you.</h2>
+                <p class="section-subtitle mx-auto">Keep your development velocity while adding enterprise-grade capabilities to your app.</p>
             </div>
         </div>
-        
-        <div class="row g-4">
+    </div>
+</section>
+
+<!-- Feature 1 (split comparison) — Ship Fast, Safely -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip me-3 mb-0"><i class="fas fa-rocket"></i></div>
-                            <h3 class="card-title mb-0">Ship Fast, Safely</h3>
-                        </div>
-                        <p class="card-text">Your MVP works — don't rewrite it. Drop in Secure Transmit where things get messy. Focus on your core business logic while we handle the infrastructure complexity.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Minimal code changes</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Preserve development velocity</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Gradual migration path</li>
+                <span class="feature-eyebrow">// 01 &middot; Ship fast</span>
+                <h2>Your MVP works. Don't rewrite it.</h2>
+                <p class="feature-lead">Drop SecureTransmit in where things get messy &mdash; file handling, compliance, audit. Keep the velocity that got you this far. Lose the 3am pages.</p>
+                <ul class="feature-list">
+                    <li>Minimal code changes</li>
+                    <li>Preserve development velocity</li>
+                    <li>Gradual migration path</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-split">
+                    <div class="feature-split-side">
+                        <div class="feature-split-head">// vibe-coded MVP only</div>
+                        <h4>Your app, solo.</h4>
+                        <ul class="feature-split-items">
+                            <li>File uploads sitting on disk</li>
+                            <li>No audit trail</li>
+                            <li>Manual retry logic</li>
+                            <li>"How do we do EDI?"</li>
+                            <li>Compliance as a spreadsheet</li>
+                        </ul>
+                    </div>
+                    <div class="feature-split-side is-positive">
+                        <div class="feature-split-head">// + SecureTransmit</div>
+                        <h4>Your app + infra.</h4>
+                        <ul class="feature-split-items">
+                            <li>Ephemeral, audited file intake</li>
+                            <li>Immutable audit by default</li>
+                            <li>Retries, replay, dead-letter</li>
+                            <li>SFTP, EDI, webhooks included</li>
+                            <li>Paranoid + Island modes on tap</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 2 (field map — canonical rewrite) — Canonical URLs for Object Stability -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip icon-chip-teal me-3 mb-0"><i class="fas fa-link"></i></div>
-                            <h3 class="card-title mb-0">Canonical URLs for Object Stability</h3>
-                        </div>
-                        <p class="card-text">Replace direct API paths with redirectable, versioned pointers. Build resilient systems that can evolve without breaking existing integrations.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Stable object references</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Version-aware routing</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Backward compatibility</li>
-                        </ul>
+                <span class="feature-eyebrow">// 02 &middot; Stability</span>
+                <h2>Swap the backend. Keep the links.</h2>
+                <p class="feature-lead">Replace direct API paths with canonical, redirectable pointers. When you rename that endpoint or move that object, your partners never notice.</p>
+                <ul class="feature-list">
+                    <li>Stable object references</li>
+                    <li>Version-aware routing</li>
+                    <li>Backward compatibility</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-map-label">
+                    <span>Canonical</span><span></span><span>Today resolves to</span>
+                </div>
+                <div class="feature-map">
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/order/4829</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">api.v2/orders/4829</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/order/4829</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">api.v3/orders/o_4829</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/customer/acme</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">crm.internal/accounts/482</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/doc/contract-3</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">s3://docs/v3/contract.pdf</span>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 3 (flow diagram) — Workflow + Routing Layer -->
+<section class="feature-row">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip icon-chip-ink me-3 mb-0"><i class="fas fa-diagram-project"></i></div>
-                            <h3 class="card-title mb-0">Workflow + Routing Layer</h3>
-                        </div>
-                        <p class="card-text">Let us receive, transform, and deliver your data — securely and traceably. Focus on business logic while we handle the data pipeline complexity.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Data transformation workflows</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Intelligent routing logic</li>
-                            <li><i class="fas fa-check text-success me-2"></i>End-to-end traceability</li>
-                        </ul>
+                <span class="feature-eyebrow">// 03 &middot; Pipeline</span>
+                <h2>We receive, transform, deliver. You focus on the app.</h2>
+                <p class="feature-lead">SecureTransmit sits in front of your app for anything that needs audit, transform, or retry. Your code never has to care about SFTP or retries again.</p>
+                <ul class="feature-list">
+                    <li>Data transformation workflows</li>
+                    <li>Intelligent routing logic</li>
+                    <li>End-to-end traceability</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-flow">
+                    <div class="feature-flow-node">
+                        <span class="flow-label">Partner / customer</span>
+                        <span class="flow-tag">SFTP / form / API</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-node is-emphasis">
+                        <span class="flow-label">SecureTransmit</span>
+                        <span class="flow-tag">audit + transform + route</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-node">
+                        <span class="flow-label">Your app</span>
+                        <span class="flow-tag">clean JSON webhook</span>
                     </div>
                 </div>
             </div>
-            
+        </div>
+    </div>
+</section>
+
+<!-- Feature 4 (badge cluster) — Built-in Protocol Support -->
+<section class="feature-row feature-row-reverse bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-chip me-3 mb-0"><i class="fas fa-lock"></i></div>
-                            <h3 class="card-title mb-0">Built-in Protocol Support</h3>
-                        </div>
-                        <p class="card-text">SFTP, HTTPS, webhook events, and CSV mapping — done right. Enterprise-grade protocols without the implementation complexity.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-check text-success me-2"></i>Standard protocol support</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Security best practices</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Compliance-ready defaults</li>
-                        </ul>
-                    </div>
+                <span class="feature-eyebrow">// 04 &middot; Protocols</span>
+                <h2>Every protocol your partners ask for, included.</h2>
+                <p class="feature-lead">SFTP, HTTPS, webhook receive and send, webforms, CSV, EDI &mdash; ready on day one. You don't implement them. You just use them.</p>
+                <ul class="feature-list">
+                    <li>Standard protocol support</li>
+                    <li>Security best practices</li>
+                    <li>Compliance-ready defaults</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-badges">
+                    <span class="feature-badge is-lg"><i class="fas fa-check"></i> included on day 1</span>
+                    <span class="feature-badge"><i class="fas fa-server"></i> SFTP</span>
+                    <span class="feature-badge"><i class="fas fa-lock"></i> HTTPS</span>
+                    <span class="feature-badge"><i class="fas fa-bolt"></i> Webhooks in</span>
+                    <span class="feature-badge"><i class="fas fa-paper-plane"></i> Webhooks out</span>
+                    <span class="feature-badge"><i class="fas fa-file-arrow-up"></i> Webforms</span>
+                    <span class="feature-badge"><i class="fas fa-table"></i> CSV</span>
+                    <span class="feature-badge"><i class="fas fa-file-invoice"></i> EDI</span>
+                    <span class="feature-badge is-muted">+ Email</span>
                 </div>
             </div>
         </div>

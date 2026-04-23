@@ -16,121 +16,321 @@ description: "Secure Transmit is the developer-first platform for secure file tr
     </div>
 </section>
 
-<!-- Solutions Overview -->
+<!-- Solutions Overview intro -->
 <section class="py-5">
     <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-8">
+        <div class="row mb-0">
+            <div class="col-lg-9">
                 <span class="section-eyebrow">// Complete integration toolkit</span>
                 <h2 class="section-title">From simple file transfers to complex workflow automation.</h2>
-                <p class="section-subtitle">Tap any card for the details. We'll notice which ones you click.</p>
+                <p class="section-subtitle">Scroll to see the shape of each tool. Click through for the details &mdash; we'll notice which ones land.</p>
             </div>
         </div>
+    </div>
+</section>
 
-        <div class="row g-4">
-            <!-- CSV -->
+<!-- Solution 1 (field map) — CSV -->
+<section class="feature-row bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <a href="{{ '/solutions/csv/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4 h-100" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - CSV (Solutions Index)');}">
-                    <div class="icon-chip"><i class="fas fa-table"></i></div>
-                    <h3 class="card-title">CSV in, JSON out</h3>
-                    <p class="card-text">The last CSV import tool you'll ever need, complete with mapping, preview, validation, and direct-to-API delivery.</p>
-                    <ul class="bullet-list">
-                        <li>Column selection, renaming, and reordering</li>
-                        <li>JSON conversion + delivery with tracking</li>
-                        <li>Live preview and validation</li>
-                    </ul>
-                    <span class="card-link-row">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
+                <span class="feature-eyebrow">// CSV</span>
+                <h2>CSV in, JSON out.</h2>
+                <p class="feature-lead">The last CSV import tool you'll ever need &mdash; complete with mapping, preview, validation, and direct-to-API delivery.</p>
+                <ul class="feature-list">
+                    <li>Column selection, renaming, reordering</li>
+                    <li>JSON conversion + delivery with tracking</li>
+                    <li>Live preview and validation</li>
+                </ul>
+                <a href="{{ '/solutions/csv/' | relative_url }}" class="btn btn-outline-primary mt-2" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - CSV (Solutions Index)');}">Learn more <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
-
-            <!-- Webforms -->
             <div class="col-lg-6">
-                <a href="{{ '/solutions/webforms/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4 h-100" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Webforms (Solutions Index)');}">
-                    <div class="icon-chip icon-chip-teal"><i class="fas fa-file-arrow-up"></i></div>
-                    <h3 class="card-title">Secure webforms</h3>
-                    <p class="card-text">Accept uploads and structured data from anyone &mdash; customers, vendors, or internal users &mdash; with customizable, secure forms.</p>
-                    <ul class="bullet-list">
-                        <li>Visual builder with file + data field support</li>
-                        <li>Secure, expiring document storage</li>
-                        <li>Workflow and API integration</li>
-                    </ul>
-                    <span class="card-link-row">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
+                <div class="feature-map-label">
+                    <span>CSV column</span><span></span><span>API field</span>
+                </div>
+                <div class="feature-map">
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">customer_id</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">customerId</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">Order Date</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">purchasedAt</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">amount_usd</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">amount</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">email_address</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">contact.email</span>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- SFTP -->
+<!-- Solution 2 (mock form) — Webforms -->
+<section class="feature-row feature-row-reverse">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <a href="{{ '/solutions/sftp/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4 h-100" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - SFTP (Solutions Index)');}">
-                    <div class="icon-chip"><i class="fas fa-server"></i></div>
-                    <h3 class="card-title">Evented, secure SFTP</h3>
-                    <p class="card-text">Filesystem-less, compliant SFTP with automatic workflows and zero infrastructure overhead.</p>
-                    <ul class="bullet-list">
-                        <li>Real-time PUT/GET triggers</li>
-                        <li>Paranoid mode (delete-on-ack) with audit + hash trail</li>
-                        <li>Legacy vendor integration made easy</li>
-                    </ul>
-                    <span class="card-link-row">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
+                <span class="feature-eyebrow">// Webforms</span>
+                <h2>Secure webforms.</h2>
+                <p class="feature-lead">Accept uploads and structured data from anyone &mdash; customers, vendors, or internal users &mdash; with customizable, secure forms.</p>
+                <ul class="feature-list">
+                    <li>Visual builder with file + data field support</li>
+                    <li>Secure, expiring document storage</li>
+                    <li>Workflow and API integration</li>
+                </ul>
+                <a href="{{ '/solutions/webforms/' | relative_url }}" class="btn btn-outline-primary mt-2" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Webforms (Solutions Index)');}">Learn more <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
-
-            <!-- Workflows -->
             <div class="col-lg-6">
-                <a href="{{ '/solutions/workflows/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4 h-100" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Workflows (Solutions Index)');}">
-                    <div class="icon-chip icon-chip-ink"><i class="fas fa-diagram-project"></i></div>
-                    <h3 class="card-title">Build your ideal data flow</h3>
-                    <p class="card-text">Create event-driven, auditable workflows to translate, enrich, and route data anywhere.</p>
-                    <ul class="bullet-list">
-                        <li>Format transformation: CSV, XML, JSON, EDI</li>
-                        <li>Multi-destination routing</li>
-                        <li>Full audit logs and retries</li>
-                    </ul>
-                    <span class="card-link-row">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
+                <div class="feature-mockform">
+                    <div class="feature-mockform-bar">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        <span>partner-intake</span>
+                    </div>
+                    <div class="feature-mockform-field">
+                        <span class="feature-mockform-label">Partner</span>
+                        <div class="feature-mockform-input">Acme Supply Co.</div>
+                    </div>
+                    <div class="feature-mockform-field">
+                        <span class="feature-mockform-label">Upload</span>
+                        <div class="feature-mockform-input is-file"><i class="fas fa-file-arrow-up me-2"></i>orders-2026-04-23.csv</div>
+                    </div>
+                    <div class="feature-mockform-submit">Submit &rarr; workflow</div>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Canonical URLs -->
+<!-- Solution 3 (terminal) — SFTP -->
+<section class="feature-row bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
             <div class="col-lg-6">
-                <a href="{{ '/solutions/canonical/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4 h-100" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Canonical (Solutions Index)');}">
-                    <div class="icon-chip"><i class="fas fa-link"></i></div>
-                    <h3 class="card-title">One link to rule your data</h3>
-                    <p class="card-text">Create stable, secure, redirectable URLs to reference any object, across systems, APIs, or apps.</p>
-                    <ul class="bullet-list">
-                        <li>Short URL, UUID, and integer access</li>
-                        <li>Versioned and security-scoped</li>
-                        <li>Metadata access via headers or API</li>
-                    </ul>
-                    <span class="card-link-row">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
+                <span class="feature-eyebrow">// SFTP</span>
+                <h2>Evented, secure SFTP.</h2>
+                <p class="feature-lead">Filesystem-less, compliant SFTP with automatic workflows and zero infrastructure overhead.</p>
+                <ul class="feature-list">
+                    <li>Real-time PUT/GET triggers</li>
+                    <li>Paranoid mode (delete-on-ack) with audit + hash trail</li>
+                    <li>Legacy vendor integration made easy</li>
+                </ul>
+                <a href="{{ '/solutions/sftp/' | relative_url }}" class="btn btn-outline-primary mt-2" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - SFTP (Solutions Index)');}">Learn more <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
-
-            <!-- EDI -->
             <div class="col-lg-6">
-                <a href="{{ '/solutions/edi/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4 h-100" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - EDI (Solutions Index)');}">
-                    <div class="icon-chip icon-chip-teal"><i class="fas fa-file-invoice"></i></div>
-                    <h3 class="card-title">EDI without legacy pain</h3>
-                    <p class="card-text">Exchange orders, invoices, ASNs, and more with real-time validation, mapping, and delivery.</p>
-                    <ul class="bullet-list">
-                        <li>ANSI X12, EDIFACT, and custom schema support</li>
-                        <li>Live validation and mapping</li>
-                        <li>JSON/XML transformation and routing</li>
-                    </ul>
-                    <span class="card-link-row">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
+                <div class="feature-terminal">
+                    <div class="feature-terminal-bar">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        <span class="name">sftp &mdash; partner session</span>
+                    </div>
+<pre>sftp&gt; <span class="tk-cmd">put orders.csv</span>
+<span class="tk-arrow">&rarr;</span> workflow:<span class="tk-warn">process-orders</span> triggered
+<span class="tk-arrow">&rarr;</span> transform csv <span class="tk-arrow">&rarr;</span> json
+<span class="tk-arrow">&rarr;</span> POST api.acme.com/orders
+<span class="tk-ok">&check;</span> delivered &middot; 204 OK &middot; 128ms</pre>
+                </div>
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- Vibe Code -->
-            <div class="col-lg-12">
-                <a href="{{ '/solutions/vibe/' | relative_url }}" class="solution-card d-flex flex-column text-decoration-none p-4 h-100" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Vibe (Solutions Index)');}">
-                    <div class="icon-chip icon-chip-ink"><i class="fas fa-bolt"></i></div>
-                    <h3 class="card-title">Plug in your vibe code</h3>
-                    <p class="card-text">Built fast? Stay fast. SecureTransmit wraps your MVP in serious infrastructure &mdash; without slowing you down.</p>
-                    <ul class="bullet-list">
-                        <li>Drop-in support for SFTP, APIs, CSVs, and forms</li>
-                        <li>Canonical links and protocol routing</li>
-                        <li>Compliance and delivery tracking built-in</li>
-                    </ul>
-                    <span class="card-link-row">Learn more <i class="fas fa-arrow-right"></i></span>
-                </a>
+<!-- Solution 4 (flow diagram) — Workflows -->
+<section class="feature-row feature-row-reverse">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// Workflows</span>
+                <h2>Build your ideal data flow.</h2>
+                <p class="feature-lead">Create event-driven, auditable workflows to translate, enrich, and route data anywhere.</p>
+                <ul class="feature-list">
+                    <li>Format transformation: CSV, XML, JSON, EDI</li>
+                    <li>Multi-destination routing</li>
+                    <li>Full audit logs and retries</li>
+                </ul>
+                <a href="{{ '/solutions/workflows/' | relative_url }}" class="btn btn-outline-primary mt-2" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Workflows (Solutions Index)');}">Learn more <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-flow">
+                    <div class="feature-flow-node is-emphasis">
+                        <span class="flow-label">Incoming payload</span>
+                        <span class="flow-tag">source</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-node">
+                        <span class="flow-label">Transform + enrich</span>
+                        <span class="flow-tag">workflow</span>
+                    </div>
+                    <div class="feature-flow-arrow"></div>
+                    <div class="feature-flow-branch">
+                        <div class="feature-flow-node">
+                            <span class="flow-label">Your API</span>
+                            <span class="flow-tag">POST</span>
+                        </div>
+                        <div class="feature-flow-node">
+                            <span class="flow-label">Partner SFTP</span>
+                            <span class="flow-tag">PUT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution 5 (URL rewrite map) — Canonical URLs -->
+<section class="feature-row bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// Canonical URLs</span>
+                <h2>One link to rule your data.</h2>
+                <p class="feature-lead">Create stable, secure, redirectable URLs to reference any object &mdash; across systems, APIs, or apps.</p>
+                <ul class="feature-list">
+                    <li>Short URL, UUID, and integer access</li>
+                    <li>Versioned and security-scoped</li>
+                    <li>Metadata access via headers or API</li>
+                </ul>
+                <a href="{{ '/solutions/canonical/' | relative_url }}" class="btn btn-outline-primary mt-2" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Canonical (Solutions Index)');}">Learn more <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-map-label">
+                    <span>Canonical</span><span></span><span>Resolves to</span>
+                </div>
+                <div class="feature-map">
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/inv/2026-1042</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">erp.internal/invoices/987342</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/po/acme-14</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">legacy.acme/po?id=14</span>
+                    </div>
+                    <div class="feature-map-row">
+                        <span class="feature-map-src">st.io/doc/contract-v3</span>
+                        <span class="feature-map-arrow">&rarr;</span>
+                        <span class="feature-map-dst">s3://docs/contracts/v3.pdf</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution 6 (badge cluster) — EDI -->
+<section class="feature-row feature-row-reverse">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// EDI</span>
+                <h2>EDI without legacy pain.</h2>
+                <p class="feature-lead">Exchange orders, invoices, ASNs, and more with real-time validation, mapping, and delivery.</p>
+                <ul class="feature-list">
+                    <li>ANSI X12, EDIFACT, and custom schema support</li>
+                    <li>Live validation and mapping</li>
+                    <li>JSON/XML transformation and routing</li>
+                </ul>
+                <a href="{{ '/solutions/edi/' | relative_url }}" class="btn btn-outline-primary mt-2" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - EDI (Solutions Index)');}">Learn more <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-badges">
+                    <span class="feature-badge is-lg"><i class="fas fa-check"></i> ANSI X12</span>
+                    <span class="feature-badge is-lg"><i class="fas fa-check"></i> EDIFACT</span>
+                    <span class="feature-badge">850</span>
+                    <span class="feature-badge">810</span>
+                    <span class="feature-badge">856</span>
+                    <span class="feature-badge">997</span>
+                    <span class="feature-badge">ORDERS</span>
+                    <span class="feature-badge">INVOIC</span>
+                    <span class="feature-badge">DESADV</span>
+                    <span class="feature-badge is-muted">+ custom</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution 7 (JSON panel) — Webhooks -->
+<section class="feature-row bg-light">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// Webhooks</span>
+                <h2>Industrial webhooks. In and out.</h2>
+                <p class="feature-lead">Receive webhooks without running a receiver. Send webhooks with Stripe-grade reliability &mdash; typed, signed, replayable.</p>
+                <ul class="feature-list">
+                    <li>Public receive endpoints (no server needed)</li>
+                    <li>Typed, versioned, HMAC-signed events</li>
+                    <li>Retries, dead-letter, replay on demand</li>
+                </ul>
+                <a href="{{ '/solutions/webhooks/' | relative_url }}" class="btn btn-outline-primary mt-2" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Webhooks (Solutions Index)');}">Learn more <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-terminal">
+                    <div class="feature-terminal-bar">
+                        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                        <span class="name">POST hooks.st.io/acme/orders</span>
+                    </div>
+<pre>{
+  <span class="tk-key">"event"</span><span class="tk-punct">:</span> <span class="tk-str">"order.created"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"id"</span><span class="tk-punct">:</span> <span class="tk-str">"evt_7fc29a4e"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"signature"</span><span class="tk-punct">:</span> <span class="tk-str">"sha256=9f86d081&hellip;"</span><span class="tk-punct">,</span>
+  <span class="tk-key">"data"</span><span class="tk-punct">:</span> { <span class="tk-key">"total"</span><span class="tk-punct">:</span> <span class="tk-num">49.00</span> }
+}</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution 8 (split comparison) — Vibe code -->
+<section class="feature-row feature-row-reverse">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6">
+                <span class="feature-eyebrow">// Vibe code</span>
+                <h2>Plug in your vibe code.</h2>
+                <p class="feature-lead">Built fast? Stay fast. SecureTransmit wraps your MVP in serious infrastructure &mdash; without slowing you down.</p>
+                <ul class="feature-list">
+                    <li>Drop-in support for SFTP, APIs, CSVs, forms, webhooks</li>
+                    <li>Canonical links and protocol routing</li>
+                    <li>Compliance and delivery tracking built-in</li>
+                </ul>
+                <a href="{{ '/solutions/vibe/' | relative_url }}" class="btn btn-outline-primary mt-2" onclick="if(typeof fathom!=='undefined'){fathom.trackEvent('Solution Card Click - Vibe (Solutions Index)');}">Learn more <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-split">
+                    <div class="feature-split-side">
+                        <div class="feature-split-head">// MVP solo</div>
+                        <h4>Your app alone.</h4>
+                        <ul class="feature-split-items">
+                            <li>Uploads on disk</li>
+                            <li>No audit trail</li>
+                            <li>Manual retries</li>
+                            <li>"How do we EDI?"</li>
+                        </ul>
+                    </div>
+                    <div class="feature-split-side is-positive">
+                        <div class="feature-split-head">// + SecureTransmit</div>
+                        <h4>Your app + infra.</h4>
+                        <ul class="feature-split-items">
+                            <li>Ephemeral, audited intake</li>
+                            <li>Immutable audit by default</li>
+                            <li>Retries + dead-letter</li>
+                            <li>EDI / SFTP / webhooks ready</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

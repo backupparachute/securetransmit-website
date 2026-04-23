@@ -161,7 +161,7 @@ The platform integrates effortlessly with API workflows, ensuring secure file tr
 
 ### 3. Compliance Assurance
 
-Secure Transmit is designed to comply with global [data compliance regulations](/blog/what-is-data-compliance), including GDPR, HIPAA, and PCI DSS. Automated compliance reports simplify audits and reduce the risk of penalties. Gartner's 2025 Compliance Trends report revealed that automated compliance tools reduce audit preparation time by 40%.
+Secure Transmit is designed to give you the primitives &mdash; immutable audit trails, hash-verified records, configurable retention, and Paranoid mode &mdash; that teams need to build workflows that meet [data compliance regulations](/blog/what-is-data-compliance) like GDPR, HIPAA, and PCI DSS. Automated compliance reports simplify audits and reduce the risk of penalties. Gartner's 2025 Compliance Trends report revealed that automated compliance tools reduce audit preparation time by 40%.
 
 ### 4. Customizable Permissions
 
