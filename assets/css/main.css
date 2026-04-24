@@ -1665,6 +1665,7 @@ footer {
     background-color: var(--secondary-dark);
     color: white;
     padding: 72px 0 40px;
+    border-top: 3px solid var(--primary-color);
 }
 
 footer h5, footer h6 {

@@ -1,6 +1,6 @@
 # SecureTransmit Pricing
 
-Self-serve. Starts at $5/mo. No free tier. No contact sales.
+Self-serve. Starts at $5/mo. No free tier.
 
 SecureTransmit is currently in closed beta. Access is by approval and billing is paused for approved accounts. Public launch is coming. Request access at https://securetransmit.io/beta-access/
 
@@ -9,7 +9,7 @@ SecureTransmit is currently in closed beta. Access is by approval and billing is
 | | Solo | Pro | Business | Enterprise |
 |---|---|---|---|---|
 | **Price** | $5 / mo (or $50 / yr) | $49 / mo | $249 / mo | From $5,000 / mo, annual, quoted |
-| **Positioning** | A paid floor, not a free tier | Where most real work happens | Team + compliance | Custom retention, SCIM, dedicated support |
+| **Positioning** | For individuals and light usage | Where most real work happens | Team + compliance | Custom retention, SCIM, dedicated support |
 
 ## Volume & limits
 
@@ -58,8 +58,6 @@ SecureTransmit is currently in closed beta. Access is by approval and billing is
 
 ## Tier philosophy
 
-**Solo is a paid floor, not a free tier.** We don't do free. A $5/mo floor keeps our servers honest, weeds out abuse, and means every Solo account is someone with real intent. If that's a dealbreaker, we're probably not your tool.
-
 **Pro is where most real work happens.** Swipe a card, production workflows, AI enrichment, Paranoid mode, Island mode — all there.
 
 **Business adds team and compliance features.** SSO, geo-blocking, higher throughput, priority support. Plus full retention configurability.
@@ -67,6 +65,8 @@ SecureTransmit is currently in closed beta. Access is by approval and billing is
 **Enterprise starts at $5k/mo.** Custom retention, dedicated support, SCIM, audit log export. Founding rates available for design partners — contact us.
 
 ## FAQ
+
+**Is there a free tier?** No, and we don't plan to add one. We don't run ads and we don't make money off your data — we make money from the monthly fee. Solo starts at $5/mo (or $50/yr).
 
 **How does file retention work?** Every plan sets a default file retention window — 7 days on Solo, 30 on Pro, 90 on Business, fully custom on Enterprise. When that window expires, the file data is deleted. Audit records and SHA-256 hashes are retained separately (1 year on Solo, forever on Pro and up) so you can still prove what moved, even after the file is gone.
 
