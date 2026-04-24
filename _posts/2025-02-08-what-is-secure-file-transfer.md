@@ -143,7 +143,7 @@ Secure Transmit offers a cutting-edge solution for secure file transfer, priorit
 Secure Transmit employs industry-leading encryption standards such as AES-256, ensuring that files remain confidential during transit and at rest. The platform also supports secure protocols like SFTP, HTTPS, and FTPS.
 
 ### 2. Compliance Automation
-Whether your organization is building toward GDPR, HIPAA, or PCI DSS, Secure Transmit gives you the primitives &mdash; immutable audit trails, hash-verified records, configurable retention, and access controls &mdash; that teams use to build compliant workflows.
+Whether your organization is building toward GDPR, HIPAA, or PCI DSS, Secure Transmit gives you the primitives, immutable audit trails, hash-verified records, configurable retention, and access controls, that teams use to build compliant workflows.
 
 ### 3. Seamless Integration
 Secure Transmit integrates with popular tools and platforms, from CRMs like Salesforce to cloud storage solutions such as AWS and Google Drive. This ensures that secure file transfer fits seamlessly into your existing workflows.
